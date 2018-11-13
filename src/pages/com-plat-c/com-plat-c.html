@@ -1,0 +1,645 @@
+<!--
+  Generated template for the ComPlatCPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Communication Platform C</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="ammendData()">
+		<h6 id="survey-heading2" style="color:#000000;">
+      C. Media
+    </h6>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Alin sa mga sumusunod media ang:
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Meron sa bahay
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Meron sa komunidad
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Ginagamit sa pagsasaka
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Madalas gumamit<br/>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Gustong gamitin para makatanggap ng impormasyon
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          TV
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_1" name="CP_C14_1"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_1" name="CP_C15_1"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_1" name="CP_C16_1"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_1" name="CP_C17_1">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_1" name="CP_C18_1"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Radyo
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_2" name="CP_C14_2"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_2" name="CP_C15_2"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_2" name="CP_C16_2"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_2" name="CP_C17_2">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_2" name="CP_C18_2"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Newspaper
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_3" name="CP_C14_3"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_3" name="CP_C15_3"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_3" name="CP_C16_3"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_3" name="CP_C17_3">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_3" name="CP_C18_3"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Magazines
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_4" name="CP_C14_4"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_4" name="CP_C15_4"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_4" name="CP_C16_4"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_4" name="CP_C17_4">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_4" name="CP_C18_4"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Computers/Laptops
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_5" name="CP_C14_5"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_5" name="CP_C15_5"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_5" name="CP_C16_5"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_5" name="CP_C17_5">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_5" name="CP_C18_5"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Cellphones
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_6" name="CP_C14_6"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_6" name="CP_C15_6"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_6" name="CP_C16_6"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_6" name="CP_C17_6">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_6" name="CP_C18_6"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Internet
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_7" name="CP_C14_7"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_7" name="CP_C15_7"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_7" name="CP_C16_7"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_7" name="CP_C17_7">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_7" name="CP_C18_7"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Websites
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_8" name="CP_C14_8"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_8" name="CP_C15_8"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_8" name="CP_C16_8"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_8" name="CP_C17_8">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_8" name="CP_C18_8"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Social Media
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_9" name="CP_C14_9"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_9" name="CP_C15_9"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_9" name="CP_C16_9"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_9" name="CP_C17_9">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+            </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_9" name="CP_C18_9"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Online tutorial videos
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_10" name="CP_C14_10"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_10" name="CP_C15_10"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_10" name="CP_C16_10"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_10" name="CP_C17_10">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+            </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_10" name="CP_C18_10"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          Iba pa, tukuyin
+          <ion-input type="text" [disabled]="checkvalue()" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C14_11" name="CP_C14_11"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C15_11" name="CP_C15_11"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C16_11" name="CP_C16_11"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+          <ion-label></ion-label>
+          <ion-select [(ngModel)]="basic.CP_C17_11" name="CP_C17_11">
+            <ion-option>
+              Male
+            </ion-option>
+            <ion-option>
+              Female
+            </ion-option>
+            <ion-option>
+              Both
+             </ion-option>
+          </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_C18_11" name="CP_C18_11"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      19. Kung gumagamit ng internet sa pagsasaka, anu-ano ang binibisita mo?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Government websites</ion-label>
+        <ion-checkbox [checked]="selectMul_19" [(ngModel)]="basic.CP_C19_1" name="CP_C19_1"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Facebook groups para sa pagsasaka</ion-label>
+        <ion-checkbox [checked]="selectMul_19" [(ngModel)]="basic.CP_C19_2" name="CP_C19_2"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Online Videos(Youtube)</ion-label>
+        <ion-checkbox [checked]="selectMul_19" [(ngModel)]="basic.CP_C19_3" name="CP_C19_3"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(19)"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      20. Bakit mo ginagamit ang mga naisagot na media sa pagsasaka?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Libre gamitin</ion-label>
+        <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_C20_1" name="CP_20_1"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Madaling gamitin</ion-label>
+        <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_C20_2" name="CP_C20_2"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ginagamit din ng kapwa magsasaka</ion-label>
+        <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_20_3" name="CP_C20_3"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Accessible sa bahay</ion-label>
+        <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_C20_4" name="CP_C20_4"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Accessible sa community</ion-label>
+        <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_C20_5" name="CP_C20_5"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_C20_Others" name="CP_C20_Others" name="title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(20)"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      21. Handa ka bang makatanggap at gumamit ng impormasyon mula sa:
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>SARAI portal</ion-label>
+        <ion-checkbox [checked]="selectMul_21" [(ngModel)]="basic.CP_C21_1" name="CP_C21_1"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mobile applications</ion-label>
+        <ion-checkbox [checked]="selectMul_21" [(ngModel)]="basic.CP_C21_2" name="CP_C21_2"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>SMS</ion-label>
+        <ion-checkbox [checked]="selectMul_21" [(ngModel)]="basic.CP_C21_3" name="CP_C21_3"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label >Social Media</ion-label>
+        <ion-checkbox [checked]="selectMul_21" [(ngModel)]="basic.CP_C21_4" name="CP_C21_4"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_C21_Other" name="CP_C21_Other" name="title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(21)"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-item id="survey-select3">
+      <ion-label stacked text-wrap style="font-size:15px">
+        22. Nais mo bang makakuha ng impormasyon mula sa sarai knowledge portal(www.sarai.ph)
+      </ion-label>
+      <ion-select [(ngModel)]="basic.CP_NaisImpormasyon" name="CP_NaisImpormasyon">
+        <ion-option>
+          Hindi - at hindi marunong
+        </ion-option>
+        <ion-option>
+          Hindi - walang akses
+        </ion-option>
+        <ion-option>
+          Oo - pero hindi marunong
+        </ion-option>
+        <ion-option>
+          Oo - marunong
+        </ion-option>
+        <ion-option>
+          Oo - may akses
+        </ion-option>
+        <ion-option>
+          Oo - walang akses
+        </ion-option>
+      </ion-select>
+    </ion-item>
+		<button ion-button type="submit" style = "background-color:green" block> NEXT </button>
+	</form>
+
+</ion-content>

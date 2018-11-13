@@ -1,0 +1,181 @@
+<!--
+  Generated template for the FarmRelCharPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Farm-Related Characteristics (FRC)</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="ammendData()">
+		<h6 id="survey-heading2" style="color:#000000;">
+      1. Anu-ano ang iyong mga pananim?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Rice</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_rice" name="FRC_rice"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Corn</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_corn" name="FRC_corn"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Banana</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_banana" name="FRC_banana"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Coconut</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_coconut" name="FRC_coconut"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Coffee</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_coffee" name="FRC_coffee"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cacao</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_cacao" name="FRC_cacao"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sugarcane</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_sugarcane" name="FRC_sugarcane"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Soybean</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_soybean" name="FRC_soybean"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tomato</ion-label>
+        <ion-checkbox [checked]="selectMul_1" [(ngModel)]="basic.FRC_tomato" name="FRC_tomato"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(1)"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-item id="survey-input18">
+      <ion-label  stacked text-wrap style="font-size:15px">2. Farm size (ha)</ion-label>
+      <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_farmSize" name="FRC_farmSize"></ion-input>
+    </ion-item>
+
+    <ion-item id="survey-select7">
+      <ion-label stacked text-wrap style="font-size:15px">
+        3. Saan nanggaling ang patubig sa iyong sakahan?
+      </ion-label>
+      
+      <ion-select [(ngModel)]="basic.FRC_waterSource" name="FRC_waterSource">
+          <ion-option>Sahod ulan</ion-option>
+          <ion-option>Irigasyon</ion-option>
+          <ion-option>Sariling Pump</ion-option>
+          <ion-option>Iba pa</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-12 col-sm-12 col-md-9 col-lg-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          DRAGGABLE
+        </ion-col>
+        <ion-col col-12 col-sm-12 col-md-9  col-lg-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Returns
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Varieties
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Qty Harvested
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Qty Sold
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Price
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Total Amount
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Dry Season
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dryVarieties" name="FRC_dryVarieties" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dryQtyHarvested" name="FRC_dryQtyHarvested"  style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dryQtySold" name="FRC_dryQtySold" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dryPrice" name="FRC_dryPrice" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dryTotalAmount" name="FRC_dryTotalAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+    	<ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Wet Season
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_wetVarieties" name="FRC_wetVarieties" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_wetQtyHarvested" name="FRC_wetQtyHarvested" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_wetQtySold" name="FRC_wetQtySold" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_wetPrice" name="FRC_wetPrice" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_wetTotalAmount" name="FRC_wetTotalAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          TOTAL RETURNS
+        </ion-col>
+        <ion-col col-8  col-sm-8 col-md-9 col-lg-10 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_TotalReturns" name="FRC_TotalReturns" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   	<button ion-button type="submit" style = "background-color:green" block>NEXT</button>
+	</form>
+
+</ion-content>

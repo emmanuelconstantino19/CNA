@@ -1,0 +1,431 @@
+<!--
+  Generated template for the DecisionMakingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Decision Making</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit) = "ammendData()">
+		<h6 id="survey-heading2" style="color:#000000;">
+      A. Decision Making
+    </h6>
+
+    <h6 id="survey-heading2" style="color:#000000;text-align:center">
+      A. Operational Decisions(Day-to-day decisions)
+    </h6>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Nakakaimpluwensya ba ang mga impmorasyong ito:
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Rainfall
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Temp
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Flood
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Drought
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          1. Sa skedyul at dami ng patabang gagamitin mo?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A1_Rainfall" name="DM_A1_Rainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A1_Temp" name="DM_A1_Temp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A1_Flood" name="DM_A1_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A1_Drought" name="DM_A1_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          2. Sa skedyul at dami ng pestisidyong gagamitin mo?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A2_Rainfall" name="DM_A2_Rainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A2_Temp" name="DM_A2_Temp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A2_Flood" name="DM_A2_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A2_Drought" name="DM_A2_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          3. Sa iyong desisyon paukol sa pagiiriga?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A3_Rainfall" name="DM_A3_Rainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A3_Temp" name="DM_A3_Temp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A3_Flood" name="DM_A3_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A3_Drought" name="DM_A3_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          4. Para sa paggamit mo ng crop protection measures? O sa paggawa ng protective structures?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A4_Rainfall" name="DM_A4_Rainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A4_Temp" name="DM_A4_Temp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A4_Flood" name="DM_A4_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A4_Drought" name="DM_A4_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          5. Sa desisyon mo paukol sa pag-ani?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A5_Rainfall" name="DM_A5_Rainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A5_Temp" name="DM_A5_Temp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A5_Flood" name="DM_A5_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A5_Drought" name="DM_A5_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          6. Sa desisyon mo paukol sa pagiimbak/pagtago ng ani?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A6_Rainfall" name="DM_A6_Rainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A6_Temp" name="DM_A6_Temp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A6_Flood" name="DM_A6_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_A6_Drought" name="DM_A6_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+
+<h6 id="survey-heading2" style="color:#000000;text-align:center">
+      B. Strategic Decisions
+</h6>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Nakakaimpluwensya ba ang mga impormasyong ito:
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">El Nino
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">La Nina
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Flood
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Drought
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          1. Para sa iyong desisyon paukol sa crop na itatanim sa susunod na taniman/season?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B1_ElNino" name="DM_B1_ElNino"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B1_LaNina" name="DM_B1_LaNina"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B1_Flood" name="DM_B1_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B1_Drought" name="DM_B1_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          2. Para sa iyong planting schedule sa susunod na taniman/season?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B2_ElNino" name="DM_B2_ElNino"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B2_LaNina" name="DM_B2_LaNina"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B2_Flood" name="DM_B2_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B2_Drought" name="DM_B2_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          3. Para sa iyong desisyon paukol sa pagkuha ng off-farm labor sa susunod na taniman/season?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B3_ElNino" name="DM_B3_ElNino"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B3_LaNina" name="DM_B3_LaNina"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B3_Flood" name="DM_B3_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B3_Drought" name="DM_B3_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          4. Para sa iyong pag-aallocate ng pinansyal na resources sa susunod na taniman/season?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B4_ElNino" name="DM_B4_ElNino"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B4_LaNina" name="DM_B4_LaNina"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B4_Flood" name="DM_B4_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B4_Drought" name="DM_B4_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          5. Para sa laki ng lupang gagamitin sa susunod na taniman/season?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B5_ElNino" name="DM_B5_ElNino"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B5_LaNina" name="DM_B5_LaNina"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B5_Flood" name="DM_B5_Flood"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_B5_Drought" name="DM_B5_Drought"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Nakakaimpluwensya ba ang mga ito sa:
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Long-term temp pattern
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Long-term rainfall pattern
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Long-term tropical pattern
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          1. Desisyon paukol sa paggamit ng lupa (land use)?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C1_LongTermTemp" name="DM_C1_LongTermTemp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C1_LongTermRainfall" name="DM_C1_LongTermRainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C1_LongTermTropical" name="DM_C1_LongTermTropical"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          2. Desisyon sa mas pagpiling magtanim ng perennials or annuals?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C2_LongTermTemp" name="DM_C2_LongTermTemp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C2_LongTermRainfall" name="DM_C2_LongTermRainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C2_LongTermTropical" name="DM_C2_LongTermTropical"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          3. Desisyon paukol sa pag-aalaga ng livestock?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C3_LongTermTemp" name="DM_C3_LongTermTemp"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C3_LongTermRainfall" name="DM_C3_LongTermRainfall"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.DM_C3_LongTermTropical" name="DM_C3_LongTermTropical"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <button ion-button type="submit" style = "background-color:green" block> NEXT</button>
+    
+	</form>
+</ion-content>

@@ -1,0 +1,114 @@
+<!--
+  Generated template for the WtpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Kaalaman sa Climate Change (KCC)</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="ammendData()">
+		<h6>
+		Background Information
+	</h6>
+	<p>
+		Ang lagay ng panahon at klima ay mahahalang na kinokonsidera sa agrikultura. Madalas,
+		maagang inaalam ng mga magsasaka ang lagay ng panahon at klima bago gumawa ng
+		desisyon sa kanilang mga bukid. Dahil dito, nakasalalay ang pagiging produktibo ng
+		agrikultura sa komprehensibo at mapagkakatiwalaan na impormasyon patungkol sa lagay ng
+		panahon at klima
+	</p>
+
+
+	<h6>
+		Valuation Question
+	</h6>
+	<p>
+		Upang mas mapaganda ang mga impormasyon at serbisyo para sa lagay ng panahon at
+	klima, at upang magawa itong mas local para magamit sa pagsasaka, kinakailangang
+	magtayo ng mga instrumento para sa pagmomonitor ng lagay ng panahon at klima.
+	Kinakailangan din ayusin ang mga pamamaraan sa pagpapakalat ng mga impormasyon sa
+	mga magsasaka. Ngunit hindi kayang suportahan ng gobyerno ang lahat ng pangangailangan
+	dahil sa kakulangan ng resources.<br>
+
+	Bilang isang magsasakang nangangailangan ng ganitong klase ng impormasyon, kung
+	sakaling hingian kayo ng kontribusyon para sa pagpapaganda ng impormasyon at sistema,
+	magiging bukal ba sa loob mo na magbigay ng kontribusyon sa pamamagitan ng pagbibigay
+	ng ani o labor days?
+	</p>
+
+	<p> Kung oo, ilang cavan/kg (minimum and maximum) ang nais mong ibigay na kontribusyon? </p>
+	<ion-item>
+		<ion-label stacked text-wrap style="font-size:15px"></ion-label>
+		<ion-input type="text" [(ngModel)]="basic.WTP_minCavKgContrib" name="WTP_minCavKgContrib" placeholder="minimum"></ion-input>	
+	</ion-item>
+	<ion-item>
+		<ion-label stacked text-wrap style="font-size:15px"></ion-label>
+		<ion-input type="text" [(ngModel)]="basic.WTP_maxCavKgContrib" name="WTP_maxCavKgContrib" placeholder="maximum"></ion-input>
+	</ion-item>
+	
+	<p> Kung oo, ilang araw (minimum and maximum) ang nais mong ibigay na kontribusyon? </p>
+	<ion-item>
+		<ion-label stacked text-wrap style="font-size:15px"></ion-label>
+		<ion-input type="text" [(ngModel)]="basic.WTP_minDaysContrib" name="WTP_minDaysContrib" placeholder="minimum"></ion-input>
+		
+	</ion-item>
+	<ion-item>
+		<ion-label stacked text-wrap style="font-size:15px"></ion-label>
+		<ion-input type="text" [(ngModel)]="basic.WTP_maxDaysContrib" name="WTP_maxDaysContrib" placeholder="maximum"></ion-input>
+	</ion-item>
+	
+	<p>Sino ang nais mong mamahala ng pangongolekta ng iyong kontribusyon?</p>
+    <ion-item>
+      <ion-label stacked text-wrap style="font-size:15px">
+      </ion-label>
+      <ion-select [(ngModel)]="basic.WTP_mamahalaKolekta" name="WTP_mamahalaKolekta">
+        <ion-option>Farmer's Association</ion-option>
+        <ion-option>LGU</ion-option>
+        <ion-option>Barangay Council</ion-option>
+        <ion-option>NGO</ion-option>
+        <ion-option>Iba pa</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <h4> ATTITUDE TOWARDS WORK</h4>
+    <h6>Anong buwan ang:</h6>
+    <ion-item>
+		<ion-label stacked text-wrap style="font-size:15px"> Pinakatuyo </ion-label>
+		<ion-input type="text" [(ngModel)]="basic.WTP_buwanPinakatuyo" name="WTP_buwanPinakatuyo"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label stacked text-wrap style="font-size:15px"> Normal </ion-label>
+		<ion-input type="text" [(ngModel)]="basic.WTP_buwanNormal" name="WTP_buwanNormal"></ion-input>
+	</ion-item>
+	<ion-item>
+		<ion-label stacked text-wrap style="font-size:15px"> Pinakamaulan </ion-label>
+		<ion-input type="text" [(ngModel)]="basic.WTP_buwanPinakamaulan" name="WTP_buwanPinakamaulan"></ion-input>
+	</ion-item>
+
+
+      
+       <h6>Anong klaseng impormasyon paukol sa ani ang mas gusto mo?</h6>
+       <p>1 – Mababang forecast ng ani para sa darating na season, ngunit 100% sigurado na
+					makakamit mo ito</p>
+       <p>2 – Mataas na forecast ng ani para sa darating na season, ngunit 50-50 na makakamit
+					mo ito</p>
+      <ion-item>
+      <ion-select [(ngModel)]="basic.WTP_klasengImpormasyon" name="WTP_klasengImpormasyon" placeholder="Punan">
+        <ion-option>1</ion-option>
+        <ion-option>2</ion-option>
+      </ion-select>
+  	  </ion-item>
+		<button ion-button type="submit" style = "background-color:green" block>SUBMIT DATA</button>
+	</form>
+	
+</ion-content>

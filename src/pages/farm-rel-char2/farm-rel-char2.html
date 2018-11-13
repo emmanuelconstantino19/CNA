@@ -1,0 +1,415 @@
+<!--
+  Generated template for the FarmRelChar2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Farm-Related Characteristics</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="ammendData()" >
+
+		<ion-grid  nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">DRAGGABLE</ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610">
+          <h3>Dry Season</h3>
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Activities
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Hired Labor
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Family Labor
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Man-Animal
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Input Quantity
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Wage or Price
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Amount
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Male or Female
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          1. Seed procurement
+          Materials:
+          <ion-input type="text" [disabled]="checkvalue()" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSPHL" name="FRC_dSPHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSPFL" name="FRC_dSPFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSPMA" name="FRC_dSPMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSPIQ" name="FRC_dSPIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSPWage" name="FRC_dSPWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSPAmount" name="FRC_dSPAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSPMF" name="FRC_dSPMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          2. Land Preparation
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLPHL" name="FRC_dLPHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLPFL" name="FRC_dLPFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLPMA" name="FRC_dLPMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLPIQ" name="FRC_dLPIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#d1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLPWage" name="FRC_dLPWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLPAmount" name="FRC_dLPAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLPMF" name="FRC_dLPMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          3. Seed bed preparation
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSBPHL" name="FRC_dSBPHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSBPFL" name="FRC_dSBPFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSBPMA" name="FRC_dSBPMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSBPIQ" name="FRC_dSBPIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSBPWage" name="FRC_dSBPWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSBPAmount" name="FRC_dSBPAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dSBPMF" name="FRC_dSBPMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          4. Levelling
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLvLHL" name="FRC_dLvLHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLvLFL" name="FRC_dLvLFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLvLMA" name="FRC_dLvLMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLvLIQ" name="FRC_dLvLIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLvLWage" name="FRC_dLvLWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLvLAmount" name="FRC_dLvLAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dLvLMF" name="FRC_dLvLMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          5. Transplanting
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dTHL" name="FRC_dTHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dTFL" name="FRC_dTFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dTMA" name="FRC_dTMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dTIQ" name="FRC_dTIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dTWage" name="FRC_dTWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dTAmount" name="FRC_dTAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dTMF" name="FRC_dTMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          6.Basal application
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dBAHL" name="FRC_dBAHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dBAFL" name="FRC_dBAFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dBAMA" name="FRC_dBAMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dBAIQ" name="FRC_dBAIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dBAWage" name="FRC_dBAWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dBAAmount" name="FRC_dBAAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dBAMF" name="FRC_dBAMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          7.Weeding
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dWHL" name="FRC_dWHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dWFL" name="FRC_dWFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dWMA" name="FRC_dWMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dWIQ" name="FRC_dWIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dWWage" name="FRC_dWWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dWAmount" name="FRC_dWAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dWMF" name="FRC_dWMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          8.Pest Management
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dPMHL" name="FRC_dPMHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dPMFL" name="FRC_dPMFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dPMMA" name="FRC_dPMMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dPMIQ" name="FRC_dPMIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dPMWage" name="FRC_dPMWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dPMAmount" name="FRC_dPMAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dPMMF" name="FRC_dPMMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          9.Fertilizer application
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dFAHL" name="FRC_dFAHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dFAFL" name="FRC_dFAFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dFAMA" name="FRC_dFAMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dFAIQ" name="FRC_dFAIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dFAWage" name="FRC_dFAWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dFAAmount" name="FRC_dFAAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dFAMF" name="FRC_dFAMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          10.Monitoring
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMonHL" name="FRC_dMonHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMonFL" name="FRC_dMonFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMonMA" name="FRC_dMonMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMonIQ" name="FRC_dMonIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMonWage" name="FRC_dMonWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMonAmount" name="FRC_dMonAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMonMF" name="FRC_dMonMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          11.Marketing
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMarHL" name="FRC_dMarHL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMarFL" name="FRC_dMarFL" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMarMA" name="FRC_dMarMA" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMarIQ" name="FRC_dMarIQ" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMarWage" name="FRC_dMarWage" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMarAmount" name="FRC_dMarAmount" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_dMarMF" name="FRC_dMarMF" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Sub-total
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_DRYsubTotal" name="FRC_DRYsubTotal"style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Total cost
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_DRYTotal" name="FRC_DRYTotal" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Cost per kilo
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610">
+          <ion-input [(ngModel)]="basic.FRC_DRYCpK" name="FRC_DRYCpK"type="text" [disabled]="checkvalue()" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Net returns
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_DRYnetRet" name="FRC_DRYnetRet" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+        <ion-col col-6 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610">
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+        <ion-col col-12 style="border-style:solid;border-color:#1d2610;background-color:#1d2610"></ion-col>
+      </ion-row>
+    </ion-grid>
+
+	<button ion-button type="submit" style = "background-color:green" block> NEXT</button>
+	</form>
+</ion-content>

@@ -1,0 +1,820 @@
+<!--
+  Generated template for the ExpoRiskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Exposure to Risks</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit) = "ammendData()">
+		<h6 id="survey-heading2" style="color:#000000">
+          B. Exposure to Risk
+    </h6>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      Pakisagot ang mga sumusunod na katanungan base inyong karanasan sa nakaraang limang taon:
+    </h6>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">
+          1. Nakaapekto ba ang malalakas na hangin sa inyong pagsasaka?
+        </ion-label>
+        <ion-select [(ngModel)]="basic.ER_StrongWind" name="ER_StrongWInd">
+          <ion-option>1 - Oo</ion-option>
+          <ion-option>0 - Hindi</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">
+          2. Nakaranas ba ng baha ang inyong komunidad?
+        </ion-label>
+        <ion-select [(ngModel)]="basic.ER_Flood" name="ER_Flood">
+          <ion-option>1 - Oo</ion-option>
+          <ion-option>0 - Hindi</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">
+          3. Nakaapekto ba ang pagguho ng lupa/landslides sa inyong komunidad?
+        </ion-label>
+        <ion-select [(ngModel)]="basic.ER_Erosion" name="ER_Erosion">
+          <ion-option>1 - Oo</ion-option>
+          <ion-option>0 - Hindi</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">
+          4. Nakaranas ba ng bagyo ang inyong komunidad?
+        </ion-label>
+        <ion-select [(ngModel)]="basic.ER_Storm" name="ER_Erosion">
+          <ion-option>1 - Oo</ion-option>
+          <ion-option>0 - Hindi</ion-option>
+        </ion-select>
+      </ion-item>
+
+       <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">
+          5. Nakaranas ba ng tagtuyot ang inyong komunidad?
+        </ion-label>
+        <ion-select [(ngModel)]="basic.ER_Drought" name="ER_Drought">
+          <ion-option>1 - Oo</ion-option>
+          <ion-option>0 - Hindi</ion-option>
+        </ion-select>
+      </ion-item>
+
+       <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">
+          6. Nakaapekto ba ang pagbabago bago ng dami ng ulan sa inyong komunidad/barangay
+        </ion-label>
+        <ion-select [(ngModel)]="basic.ER_Rainfall" name="ER_Rainfall">
+          <ion-option>1 - Oo</ion-option>
+          <ion-option>0 - Hindi</ion-option>
+        </ion-select>
+      </ion-item>
+
+       <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">
+          7. Nakaapekto ba ang price volatility of inputs and outputs sa inyong komunidad/barangay?
+        </ion-label>
+        <ion-select [(ngModel)]="basic.ER_PriceVolatility" name="ER_PriceVolatility">
+          <ion-option>1 - Oo</ion-option>
+          <ion-option>0 - Hindi</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          C. Adaptation Measures
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Kung nakaranas ng baha, ginawa mo ba ang mga sumusunod?
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Ikokonsidera mo bang gawin ang mga hindi pa naisagot
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">Kung hindi, ano ang mga dahilan<hr>
+          1 - Kulang ang pera<br/>
+          2 - Kulang ang impormasyon<br/>
+          3 - Kulang ang labor<br/>
+          4 - Di nakikit ang pangangailangan<br/>
+          5 - Others
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          1. Binago ang pananim o ng variety na itinanim
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C11" name="AM_C11"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C12" name="AM_C12"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select  [(ngModel)]="basic.AM_1_IfNotReason" name="AM_1_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+            <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          2. Binago ang timing ng pagtatanim
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C21" name="AM_C21"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C22" name="AM_C22"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_2_IfNotReason" name="AM_2_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          3. Binago ang lokasyon ng pagtatamnan
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C31" name="AM_C31"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C32" name="AM_C32"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_3_IfNotReason" name="AM_3_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          4. Gumamit ng cropping calendar
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C41" name="AM_C41"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C42" name="AM_C42"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select  [(ngModel)]="basic.AM_4_IfNotReason" name="AM_4_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+            <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          5. Bumili/Kumuha ng insurance
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C51" name="AM_C51"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C52" name="AM_C52"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_5_IfNotReason" name="AM_5_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          6. Nag-install ng water-harvesting system para sa pananim
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C61" name="AM_C61"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C62" name="AM_C62"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_6_IfNotReason" name="AM_6_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          7. Nag-install ng irigasyon
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C71" name="AM_C71"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C72" name="AM_C72"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select  [(ngModel)]="basic.AM_7_IfNotReason" name="AM_7_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          8. Nagtayo ng ditches para maiiwas ang baha sa taniman
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C81" name="AM_C81"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C82" name="AM_C82"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_8_IfNotReason" name="AM_8_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          9. Nagtanim ng bagong pananim matapos bahain ang taniman
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C91" name="AM_C91"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C92" name="AM_C92"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_9_IfNotReason" name="AM_9_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          10. Takpan ang mga pananim
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C101" name="AM_C101"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C102" name="AM_C102"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_10_IfNotReason" name="AM_10_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          11. Gumawa ng terraces/hagdan hagdan para sa pananim
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C111" name="AM_C111"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C112" name="AM_C112"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_11_IfNotReason" name="AM_11_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          12. Mulching
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C121" name="AM_C121"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C122" name="AM_C122"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_12_IfNotReason" name="AM_12_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          13. Nagtanim ng mga puno para sa shading
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C131" name="AM_C131"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C132" name="AM_C132"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_13_IfNotReason" name="AM_13_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          14. Naglaan ng mas malaking pera para sa inputs, etc.
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C141" name="AM_C141"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C142" name="AM_C142"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_14_IfNotReason" name="AM_14_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          15. Nagbago mula sa pagtatanim sa pag-aalaga ng hayop
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C151" name="AM_C151"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C152" name="AM_C152"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select  [(ngModel)]="basic.AM_15_IfNotReason" name="AM_15_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          16. Humanap ng off-farm na trabaho
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C161" name="AM_C161"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C162" name="AM_C162"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_16_IfNotReason" name="AM_16_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          17. Pinarenta ang lupang pinagtataniman
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C171" name="AM_C171"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C172" name="AM_C172"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_17_IfNotReason" name="AM_17_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          18. Land management (maintain yields and soil fertility)
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C181" name="AM_C181"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C182" name="AM_C182"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_18_IfNotReason" name="AM_18_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          19. Lumipat sa ibang lokasyon/farm
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C191" name="AM_C191"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C192" name="AM_C192"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_19_IfNotReason" name="AM_19_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          20. Iba pa, tukuyin:
+          <ion-input type="text" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C201" name="AM_C201"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.AM_C202" name="AM_C202"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.AM_20_IfNotReason" name="AM_20_IfNotReason" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+            <ion-option>
+              5
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+    <button ion-button type="submit" style = "background-color:green" block> NEXT</button>
+	</form>
+</ion-content>

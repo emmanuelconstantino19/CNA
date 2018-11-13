@@ -1,0 +1,280 @@
+<!--
+  Generated template for the NeedAssessmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Need Assessment (NA)</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="ammendData()">
+		 <h4 id="survey-heading1" style="color:white;text-align:center;background-color:#1d2610">
+      V. NEEDS ASSESSMENT
+    </h4>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      1. Paano mo nalalaman dami ng pataba at kung kailan mo kailangan maglagay ng pataba?
+    </h6>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Ayon sa Fertilizer Companies</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_FerCom" name="NA_FerCom"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ayon sa mga AEW</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_AEW" name="NA_AEW"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Natutunan mo mula sa mga seminar/trainings</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_SemTraining" name="NA_SemTraining"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nakaugaling pamamaraan</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_OldMethod" name="NA_OldMethod"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mula sa sariling karanasan</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_SelfExp" name="NA_SelfExp"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Iba pa</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_OtherFert" name="NA_OtherFert"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      2. Paano mo nalalaman kung kailangan mo nang magpatubig?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label >Sa anyo ng pananim</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_CropForm" name="NA_CropForm"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sa anyo ng lupa</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_LandForm" name="NA_LandForm"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">May abiso mula sa ibang tao</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_Permit" name="NA_Permit"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">May nakaugaliang pamamaraan gaya ng</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_Trad" name="NA_Trad"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Iba pa</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_IrrigOther" name="NA_IrrigOther"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+
+    <ion-item id="survey-select3">
+      <ion-label stacked text-wrap style="font-size:15px">
+        3. Alam mo ba ang klase ng lupang pinagtataniman mo?
+      </ion-label>
+      <ion-select [(ngModel)]="basic.NA_TypeLand" name="NA_TypeLand">
+        <ion-option>
+          Oo
+        </ion-option>
+        <ion-option>
+          Hindi
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item id="survey-select3">
+      <ion-label stacked text-wrap style="font-size:15px">
+        4. Inaalam mo ang presyo ng iyong pananim sa merkado?
+      </ion-label>
+      <ion-select [(ngModel)]="basic.NA_MarketPrice" name="NA_MarketPrice">
+        <ion-option>
+          Oo
+        </ion-option>
+        <ion-option>
+          Hindi
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    
+    <h6 id="survey-heading2" style="color:#000000;">
+      5. Paano mo nalalaman ang petsa kung kailan ka na dapat magtanim?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Sa dami ng ulan na pumatak</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_RainFall" name="NA_RainFall"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sumasabay sa iba pang nagtatanim</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_OtherPlantDate" name="NA_OtherPlantDate"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Base sa target na petsa na dapat ito ay nasa merkado</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_TargetMarketDate" name="NA_TargetMarketDate"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">May abiso mula sa ibang tao</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_PermitDate" name="NA_PermitDate"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nakaugaliang pamamaraan</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_TradDate" name="NA_TradDate"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_OthersDate" name="NA_OthersDate"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      6. Ano ang iyong ginagawa kapag nabalitaan mong may parating na masamang panhaon o kaya naman ay may paglaganap ng sakit ng sakit sa pananim?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Sumasanguni sa ibang tao</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_Consult" name="NA_Consult"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Inaani ko na agad ang aking pananim</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Harvest" name="NA_Harvest"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nag-aantay ng abiso mula sa ibang tao</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_PermitBWeather" name="NA_PermitBWeather"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nakaugaliang pamamaraan</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_TradBWeather" name="NA_TradBWeather"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Wala</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_None" name="NA_None"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_OtherBWeather" name="NA_OtherBWeather"></ion-input>
+      </ion-item>
+
+    </ion-list>    
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      7. Tuwing may pinsala ang iyong pananim inirereport mo ba ito? Kanino?
+    </h6>
+    <ion-list radio-group [(ngModel)]="basic.NA_Report" name="NA_Report">
+      <ion-item>
+        <ion-label>Oo</ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Kanino?</ion-label>
+        <ion-input type="text" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hindi</ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      8. Sino ang una mong nilalapitan kapag may katanungan o problema ka sa pagsasaka?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Sa Barangay</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Barangay" name="NA_Barangay"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sa Organisasyong kinabibilangan</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Org" name="NA_Org"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sa AEW</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_AEW2" name="NA_AEW2"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Farmer Leader</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Leader" name="NA_Leader"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Kapwa magsasaka</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_OtherFarmers" name="NA_OtherFarmers"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_OtherInquiry" name="NA_OtherInquiry"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      9. Nais mo bang makatanggap ng impormasyon tungkol sa makabagong pagsasaka?
+    </h6>
+    <ion-list radio-group [(ngModel)]="basic.NA_ReceiveInfo" name="NA_ReceiveInfo">
+      <ion-item>
+        <ion-label text-wrap>Hindi</ion-label>
+        <ion-radio item-left></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>Oo - matuto gumamit at bumasa ng data ng soil sensors</ion-label>
+        <ion-radio item-left></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>Oo - matuto gumamit at bumasa ng data ng AWS</ion-label>
+        <ion-radio item-left></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>Oo - matuto gumamit at bumasa ng resulta ng Crop Manager</ion-label>
+        <ion-radio item-left></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Iba pa,tukuyin</ion-label>
+        <ion-input type="text" name="title"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button type="submit" style = "background-color:green" block> NEXT</button>
+	</form>
+</ion-content>

@@ -1,0 +1,228 @@
+<!--
+  Generated template for the FarmRelChar4Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Farm-Related Characeristics</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="ammendData()">
+		<h6 id="survey-heading2" style="color:#000000;">
+      4. Saan nagmumula ang pang-gastos mo sa pagsasaka?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Sariling Pera</ion-label>
+        <ion-checkbox [checked]="selectMul_4" [(ngModel)]="basic.FRC_ownMoney" name="FRC_ownMoney"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hiram sa bangko</ion-label>
+        <ion-checkbox [checked]="selectMul_4" [(ngModel)]="basic.FRC_LoanBank" name="FRC_LoanBank"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hiram sa kooperatiba</ion-label>
+        <ion-checkbox [checked]="selectMul_4" [(ngModel)]="basic.FRC_LoanCoopertive" name="FRC_LoanCoopertive"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hiram sa Kamag-anak/kaibigan</ion-label>
+        <ion-checkbox [checked]="selectMul_4" [(ngModel)]="basic.FRC_LoanRelative" name="FRC_LoanRelative"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hiram sa Micro-financing</ion-label>
+        <ion-checkbox [checked]="selectMul_4" [(ngModel)]="basic.FRC_LoanMicroFinancing" name="FRC_LoanMicroFinancing"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Iba pa</ion-label>
+        <ion-checkbox [checked]="selectMul_4" [(ngModel)]="basic.FRC_ExpensesSourceOther" name="FRC_ExpensesSourceOther"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(4)"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-item id="survey-input7">
+      <ion-label stacked text-wrap style="font-size:15px">5. Kung nanghiram, paano at kailan ito binabayaran?</ion-label>
+      <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_LoanPaymentDetails" name="FRC_LoanPaymentDetails"></ion-input>
+    </ion-item>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      6. Saan mo dinadala o binebenta ang iyong ani?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Palengke</ion-label>
+        <ion-checkbox [checked]="selectMul_6" [(ngModel)]="basic.FRC_Palengke" name="FRC_Palengke"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Kooperatiba</ion-label>
+        <ion-checkbox [checked]="selectMul_6" [(ngModel)]="basic.FRC_Cooperative" name="FRC_Cooperative"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Trader</ion-label>
+        <ion-checkbox [checked]="selectMul_6" [(ngModel)]="basic.FRC_Trader" name="FRC_Trader"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sariling Benta</ion-label>
+        <ion-checkbox [checked]="selectMul_6" [(ngModel)]="basic.FRC_SelfSell" name="FRC_SelfSell"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pangkain sa bahay</ion-label>
+        <ion-checkbox [checked]="selectMul_6" [(ngModel)]="basic.FRC_HouseFood" name="FRC_HouseFood"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(6)"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      7. May ibang bang namamahala ng sakahan bukod sayo?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Asawa</ion-label>
+        <ion-checkbox [checked]="selectMul_7" [(ngModel)]="basic.FRC_Asawa" name="FRC_Asawa"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Magulang</ion-label>
+        <ion-checkbox [checked]="selectMul_7" [(ngModel)]="basic.FRC_Magulang" name="FRC_Magulang"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Anak</ion-label>
+        <ion-checkbox [checked]="selectMul_7" [(ngModel)]="basic.FRC_Anak" name="FRC_Anak"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Kapatid</ion-label>
+        <ion-checkbox [checked]="selectMul_7" [(ngModel)]="basic.FRC_Kapatid" name="FRC_Kapatid"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mga Kamag-anak</ion-label>
+        <ion-checkbox [checked]="selectMul_7" [(ngModel)]="basic.FRC_Kamaganak" name="FRC_Kamaganak"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Laborer</ion-label>
+        <ion-checkbox [checked]="selectMul_7" [(ngModel)]="basic.FRC_Laborer" name="FRC_Laborer"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(7)"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      8. Mga naranasang problema sa pagtatanim?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Peste/Sakit sa panananim</ion-label>
+        <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.FRC_Pests" name="FRC_Pests"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Bagyo</ion-label>
+        <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.FRC_Storm" name="FRC_Storm"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Drought</ion-label>
+        <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.FRC_Drought" name="FRC_Drought"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Walang Kapital</ion-label>
+        <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.FRC_NoCapital" name="FRC_NoCapital"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Walang laborer</ion-label>
+        <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.FRC_NoLaborer" name="FRC_NoLaborer"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll(8)"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-item id="survey-select3">
+      <ion-label stacked text-wrap style="font-size:15px">
+        9. Ano ang pangunahing gawain mo sa pagsasaka?
+      </ion-label>
+      <ion-select [(ngModel)]="basic.FRC_mainWork" name="FRC_mainWork">
+        <ion-option>
+          Decision-making terms of inputs
+        </ion-option>
+        <ion-option>
+          Land preparation
+        </ion-option>
+        <ion-option>
+          Budgeting
+        </ion-option>
+        <ion-option>
+          Cultivation
+        </ion-option>
+        <ion-option>
+          Fertilizer application
+        </ion-option>
+        <ion-option>
+          Harvesting
+        </ion-option>
+        <ion-option>
+          Marketing
+        </ion-option>
+        <ion-option>
+          Attend trainings and meetings
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item id="survey-input7">
+      <ion-label stacked text-wrap style="font-size:15px">10. Kumukuha po ba kayo ng insurance para sa inyong pananim? Kung oo, magkano ang iyong binabayaran?</ion-label>
+      <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_InsuranceAmount" name="FRC_InsuranceAmount"></ion-input>
+    </ion-item>
+
+    <ion-item id="survey-input7">
+      <ion-label stacked text-wrap style="font-size:15px">11. Kung hindi, bakit hindi ka kumukuha ng insurance para sa iyong pananim?</ion-label>
+      <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_nonInsuranceReason" name="FRC_nonInsuranceReason"></ion-input>
+    </ion-item>
+
+    <ion-item id="survey-input7">
+      <ion-label stacked text-wrap style="font-size:15px">12. Ano ang persepsyon o pagka-intindi mo sa crop insurance?</ion-label>
+      <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.FRC_CropInsurancePerception" name="FRC_CropInsurancePerception"></ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" style = "background-color:green" block> NEXT </button>
+	</form>
+</ion-content>

@@ -1,0 +1,1941 @@
+<!--
+  Generated template for the ComPlatAPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>COMMUNICATION PLATFORM</ion-title>
+    <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="ammendData()">
+
+    <h4 id="survey-heading1" style="color:white;text-align:center;background-color:#1d2610">
+      IV. COMMUNICATION PLATFORMS
+    </h4>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+      A. Agricultural Information
+    </h6>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Para sa bawat impormasyon, pakisagot ang mga sumusunod na katanungan:
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Meron sa komunidad<br/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Ginagamit sa pagsasaka<br/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Timeliness<br/>
+          Ilang araw bago dumating ang impormasyon?
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Gamit<br/>
+          1 - Not useful<br/>
+          2 - Somewhat useful<br/>
+          3 - Useful
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Reliability<br/>
+          1 - Not reliable<br/>
+          2 - Somewhat reliable<br/>
+          3 - Reliable
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Adequacy<br/>
+          1 - Not Adequate<br/>
+          2 - Somewhat adequate<br/>
+          3 - Adequate
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Kulang sa komunidad/ Kailangan sa pagsasaka
+        </ion-col>
+      </ion-row>
+
+  
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          1 - Planting dates
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_PDMsK" name="CP_PDMsK" placeholder="Planting Dates"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_PDGsP" name="CP_PDGsP" placeholder="Planting Dates">
+          </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" placeholder="Planting Dates" [(ngModel)]="basic.CP_PDTmeLiness" name="CP_PDTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_PDGamit" name="CP_PDGamit" placeholder="Planting Dates">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_PDRel" name="CP_PDRel" placeholder="Planting Dates">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_PDAdeq" name="CP_PDAdeq" placeholder="Planting Dates">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_PDKsK" name="CP_PDKsK"  placeholder="Planting Dates" style="border-bottom: 1px solid #A0A0A0; width:100%"/>
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          2 - Water management
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 lg-col-3  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WatManMsK" name="CP_WatManMsK" placeholder="Water Management">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 lg-col-3  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WatManGsP" name="CP_WatManGsP" placeholder="Water Management">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WatManTmeLiness" name="CP_WatManTmeLiness" placeholder="Water Management" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+         <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WatManGamit" name="CP_WatManGamit" placeholder="Water Management">
+             <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WatManRel" name="CP_WatManRel" placeholder="Water Management">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WatManAdeq" name="CP_WatManAdeq" placeholder="Water Management">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" placeholder="Water Management" [(ngModel)]="basic.CP_WatManKsK" name="CP_WatManKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          3 - Irrigation schedule
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 lg-col-3  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_IrrigSchedMsK" name="basic.CP_IrrigSchedMsK" placeholder="Irrigation Schedule">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 lg-col-3  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_IrrigSchedGsP" name="basic.CP_IrrigSchedGsP" placeholder="Irrigation Schedule" >
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_IrrigSchedTmeLiness" name="CP_IrrigSchedTmeLiness" placeholder="Irrigation Schedule" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_IrrigSchedGamit" name="CP_IrrigSchedGamit" placeholder="Irrigation Schedule">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_IrrigSchedRel" name="CP_IrrigSchedRel" placeholder="Irrigation Schedule">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_IrrigSchedAdeq" name="CP_IrrigSchedAdeq" placeholder="Irrigation Schedule">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_IrrigSchedKsK" name="CP_IrrigSchedKsK"  placeholder="Irrigation Schedule" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          4 - Fertilizer application
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 lg-col-3  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_FerAppMsK" name="basic.CP_FerAppMsK" placeholder="Fertilizer Application">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 lg-col-3  style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_FerAppGsP" name="basic.CP_FerAppGsP" placeholder="Fertilizer Application" >
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_FerAppTmeLiness" name="CP_FerAppTmeLiness" placeholder="Fertilizer Application" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+         <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_FerAppGamit" name="CP_FerAppGamit" placeholder="Fertilizer Application">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_FerAppRel" name="CP_FerAppRel" placeholder="Fertilizer Application">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_FerAppAdeq" name="CP_FerAppAdeq" placeholder="Fertilizer Application">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_FerAppKsK" name="CP_FerAppKsK" placeholder="Fertilizer Application" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          5 - Pesticide application
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_PestAppMsK" name="basic.CP_PestAppMsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_PestAppGsP" name="basic.CP_PestAppGsP" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_PestAppTmeLiness" name="CP_PestAppTmeLiness" placeholder="Pesticide Application" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_PestAppGamit" name="CP_PestAppGamit" placeholder="Pesticide Application">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_PestAppRel" name="CP_PestAppRel" placeholder="Pesticide Application">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_PestAppAdeq" name="CP_PestAppAdeq" placeholder="Pesticide Application">
+             <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" placeholder="Pesticide Application" [(ngModel)]="basic.CP_PestAppKsK" name="CP_PestAppKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          6 - Integrated Pest Management(IPM)
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_IPMMsK" name="basic.CP_IPMMsK" placeholder="Integrated Pest Management">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_IPMGsP" name="basic.CP_IPMGsP" placeholder="Integrated Pest Management">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_IPMTmeLiness" placeholder="Integrated Pest Management" name="CP_IPMTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_IPMGamit" name="CP_IPMGamit" placeholder="Integrated Pest Management">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_IPMRel" name="CP_IPMRel" placeholder="Integrated Pest Management">
+             <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_IPMAdeq" name="CP_IPMAdeq" placeholder="Integrated Pest Management">
+           <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_IPMKsK" name="CP_IPMKsK" placeholder="Integrated Pest Management" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          7 - Weather forecast/climate information
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WeathFcastMsK" name="basic.CP_WeathFcastMsK" placeholder="Weather Forecast/Climate Information">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+           <ion-checkbox [(ngModel)]="basic.CP_WeathFcastGsP" name="basic.CP_WeathFcastGsP" placeholder="Weather Forecast/Climate Information">
+           </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WeathFcastTmeLiness" name="CP_WeathFcastTmeLiness" placeholder="Weather Forecast/Climate Information" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WeathFcastGamit" name="CP_WeathFcastGamit" placeholder="Weather Forecast/Climate Information">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WeathFcastRel" name="CP_WeathFcastRel" placeholder="Weather Forecast/Climate Information">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WeathFcastAdeq" name="CP_WeathFcastAdeq" placeholder="Weather Forecast/Climate Information">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WeathFcastKsK" name="CP_WeathFcastKsK" placeholder="Weather Forecast/Climate Information" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          8 - Integrated Crop Management(ICM)
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ICMMsK" name="basic.CP_ICMMsK" placeholder="Integrated Crop Management"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ICMGsP" name="basic.CP_ICMGsP" placeholder="Integrated Crop Management">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ICMTmeLiness" name="CP_ICMTmeLiness" placeholder="Integrated Crop Management" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ICMGamit" name="CP_ICMGamit" placeholder="Integrated Crop Management">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ICMRel" name="CP_ICMRel" placeholder="Integrated Crop Management">
+             <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ICMAdeq" name="CP_ICMAdeq" placeholder="Integrated Crop Management">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ICMKsK" name="CP_ICMKsK" placeholder="Integrated Crop Management" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          9 - Rainfall forecast
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_RainFMsK" name="basic.CP_RainFMsK" placeholder="Rainfall Forecast"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_RainFGsP" name="basic.CP_RainFGsP" placeholder="Rainfall Forecast">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_RainFTmeLiness" name="CP_RainFTmeLiness" placeholder="Rainfall Forecast" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_RainFGamit" name="CP_RainFGamit" placeholder="Rainfall Forecast">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_RainFRel" name="CP_RainFRel" placeholder="Rainfall Forecast">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_RainFAdeq" name="CP_RainFAdeq" placeholder="Rainfall Forecast">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_RainFKsK" name="CP_RainFKsK" placeholder="Rainfall Forecast" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          10 - Thunderstorm warning
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610"> 
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ThunWarnMsK" name="basic.CP_ThunWarnMsK" placeholder="Thunderstorm Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610"> 
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ThunWarnGsP" name="basic.CP_ThunWarnGsP" placeholder="Thunderstorm Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ThunWarnTmeLiness" name="CP_ThunWarnTmeLiness" placeholder="Thunderstorm Warning" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ThunWarnGamit" name="CP_ThunWarnGamit" placeholder="Thunderstorm Warning">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ThunWarnRel" name="CP_ThunWarnRel" placeholder="Thunderstorm Warning">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ThunWarnAdeq" name="CP_ThunWarnAdeq" placeholder="Thunderstorm Warning">
+             <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ThunWarnKsK" placeholder="Thunderstorm Warning" name="CP_ThunWarnKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          11 - Tropical cyclone warning
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_TropCycWarnMsK" name="CP_TropCycWarnMsK" placeholder="Tropical Cyclone Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_TropCycWarnGsP" name="CP_TropCycWarnGsP" placeholder="Tropical Cyclone Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_TropCycWarnTmeLiness" placeholder="Tropical Cyclone Warning" name="CP_TropCycWarnTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_TropCycWarnGamit" name="CP_TropCycWarnGamit" placeholder="Tropical Cyclone Warning">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_TropCycWarnRel" name="CP_TropCycWarnRel" placeholder="Tropical Cyclone Warning">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_TropCycWarnAdeq" name="CP_TropCycWarnAdeq" placeholder="Tropical Cyclone Warning">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_TropCycWarnKsK" name="CP_TropCycWarnKsK" placeholder="Tropical Cyclone Warning" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          12 - Wind speed
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WindSpdMsK" name="basic.CP_WindSpdMsK" placeholder="Wind Speed">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WindSpdGsP" name="basic.CP_WindSpdGsP" placeholder="Wind Speed">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WindSpdTmeLiness" placeholder="Wind Speed" name="CP_WindSpdTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WindSpdGamit" name="CP_WindSpdGamit" placeholder="Wind Speed">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WindSpdRel" name="CP_WindSpdRel" placeholder="Wind Speed">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WindSpdAdeq" name="CP_WindSpdAdeq" placeholder="Wind Speed">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WindSpdKsK" placeholder="Wind Speed" name="CP_WindSpdKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          13 - Temperature
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_TempMsK" name="basic.CP_TempMsK" placeholder="Temperature">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_TempGsP" name="basic.CP_TempGsP" placeholder="Temperature">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_TempTmeLiness" placeholder="Temperature" name="CP_TempTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_TempGamit" name="CP_TempGamit" placeholder="Temperature">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_TempRel" name="CP_TempRel" placeholder="Temperature">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_WindSpdAdeq" name="CP_TempAdeq" placeholder="Temperature">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_TempKsK" placeholder="Temperature" name="CP_TempKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          14 - Relative humidity
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_RelHumMsK" name="basic.CP_RelHumMsK" placeholder="Relative Humidity">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_RelHumGsP" name="basic.CP_RelHumGsP" placeholder="Relative Humidity">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_RelHumTmeLiness" placeholder="Relative Humidity" name="CP_RelHumTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_RelHumGamit" name="CP_RelHumGamit" placeholder="Relative Humidity">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_RelHumRel" name="CP_RelHumRel" placeholder="Relative Humidity">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_RelHumAdeq" name="CP_RelHumAdeq" placeholder="Relative Humidity">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_RelHumKsK" placeholder="Relative Humidity" name="CP_RelHumKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          15 - Leaf wetness
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_LeafWetMsK" name="basic.CP_LeafWetMsK" placeholder="Leaf Wetness">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_LeafWetGsP" name="basic.CP_LeafWetGsP" placeholder="Leaf Wetness">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeafWetTmeLiness" placeholder="Leaf Wetness" name="CP_LeafWetTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_LeafWetGamit" name="CP_LeafWetGamit" placeholder="Leaf Wetness">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_LeafWetRel" name="CP_LeafWetRel" placeholder="Leaf Wetness">
+           <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_LeafWetAdeq" name="CP_LeafWetAdeq" placeholder="Leaf Wetness">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeafWetKsK" placeholder="Leaf Wetness" name="CP_LeafWetKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          16 - Soil moisture condition
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_SoilMoistMsK" name="basic.CP_SoilMoistMsK" placeholder="Soil Moisture Condition">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_SoilMoistGsP" name="basic.CP_SoilMoistGsP" placeholder="Soil Moisture Condition">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SoilMoistTmeLiness" placeholder="Soil Moisture Condition" name="CP_SoilMoistTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_SoilMoistGamit" name="CP_SoilMoistGamit" placeholder="Soil Moisture Condition">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_SoilMoistRel" name="CP_SoilMoistRel" placeholder="Soil Moisture Condition">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_SoilMoistAdeq" name="CP_SoilMoistAdeq" placeholder="Soil Moisture Condition">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SoilMoistKsK" placeholder="Soil Moisture Condition" name="CP_SoilMoistKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          17 - Flood warning
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_FloodWarnMsK" name="basic.CP_FloodWarnMsK" placeholder="Flood Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_FLoodWarnGsP" name="basic.CP_FloodWarnGsP" placeholder="Flood Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_FloodWarnTmeLiness" placeholder="Flood Warning"  name="CP_FloodWarnTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_FloodWarnGamit" name="CP_FloodWarnGamit" placeholder="Flood Warning">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_FloodWarnRel" name="CP_FloodWarnRel" placeholder="Flood Warning">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_FloodWarnAdeq" name="CP_FloodWarnAdeq" placeholder="Flood Warning">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_FloodWarnKsK" placeholder="Flood Warning" name="CP_FloodWarnKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          18 - El nino/La nina warning
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ElniLaniMsK" name="basic.CP_ElniLaniMsK" placeholder="El Nino/La Nina Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ElniLaniGsP" name="basic.CP_ElniLaniGsP" placeholder="El Nino/La Nina Warning">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ElniLaniTmeLiness" placeholder="El Nino/La Nina Warning" name="CP_ElniLaniTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ElniLaniGamit" name="CP_ElniLaniGamit" placeholder="El Nino/La Nina Warning">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ElniLaniRel" name="CP_ElniLaniRel" placeholder="El Nino/La Nina Warning">
+             <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_ElniLaniAdeq" name="CP_ElniLaniAdeq" placeholder="El Nino/La Nina Warning">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ElniLaniKsK" placeholder="El Nino/La Nina Warning" name="CP_ElniLaniKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          19 - Best farming practices
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_BestFrmPrctMsK" name="basic.CP_BestFrmPrctMsK" placeholder="Best Farm Practices">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_BestFrmPrctGsP" name="basic.CP_BestFrmPrctGsP" placeholder="Best Farm Practices">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_BestFrmPrctTmeLiness" placeholder="Best Farm Practices" name="CP_PBestFrmPrctmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_BestFrmPrctGamit" name="CP_BestFrmPrctGamit" placeholder="Best Farm Practices">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_BestFrmPrctRel" name="CP_BestFrmPrctRel" placeholder="Best Farm Practices">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_BestFrmPrctAdeq" name="CP_BestFrmPrctAdeq" placeholder="Best Farm Practices">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_BestFrmPrctKsK" placeholder="Best Farm Practices" name="CP_BestFrmPrctKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          20 - New farming techniques
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_NewFrmPrctMsK" name="basic.CP_NewFrmPrctMsK" placeholder="New Farming Techniques">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_NewFrmPrctGsP" name="basic.CP_NewFrmPrctGsP" placeholder="New Farming Techniques">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_NewFrmPrctTmeLiness" placeholder="Best Farm Practices" name="CP_NewFrmPrctTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_NewFrmPrctGamit" name="CP_NewFrmPrctGamit" placeholder="New Farming Techniques">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_NewFrmPrctRel" name="CP_NewFrmPrctRel"  placeholder="New Farming Techniques">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_NewFrmPrctAdeq" name="CP_NewFrmPrctAdeq" placeholder="New Farming Techniques">
+           <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_NewFrmPrctKsK" placeholder="New Farming Techniques" name="CP_NewFrmPrctKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          21 - New farm machineries/equipment
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_NewFrmMachneMsK" name="basic.CP_NewFrmMachneMsK" placeholder="New Farm Machineries">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_NewFrmMachneGsP" name="basic.CP_NewFrmMachneGsP" placeholder="New Farm Machineries">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_NewFrmMachneTmeLiness" placeholder="New Farm Machineries" name="CP_NewFrmMachneTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_NewFrmMachneGamit" name="CP_NewFrmMachneGamit" placeholder="New Farm Machineries">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_NewFrmMachneRel" name="CP_NewFrmMachneRel" placeholder="New Farm Machineries">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_NewFrmMachneAdeq" name="CP_NewFrmMachneAdeq" placeholder="New Farm Machineries">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_NewFrmMachneKsK" placeholder="New Farm Machineries" name="CP_NewFrmMachneKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          22 - Call for trainings, seminars
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_CallForTrngMsK" name="basic.CP_CallForTrngMsK" placeholder="Call For Trainings">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_CallForTrngGsP" name="basic.CP_CallForTrngGsP" placeholder="Call For Trainings">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_CallForTrngTmeLiness" placeholder="Call For Trainings" name="CP_CallForTrngTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+     <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_CallForTrngGamit" name="CP_CallForTrngGamit" placeholder="Call For Trainings">
+           <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_CallForTrngRel" name="CP_CallForTrngRel" placeholder="Call For Trainings">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_CallForTrngAdeq" name="CP_CallForTrngAdeq" placeholder="Call For Trainings">
+             <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_CallForTrngKsK" placeholder="Call For Trainings" name="CP_CallForTrngKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          23 - Call for farmers meeting
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_CallForFrmersMtgMsK" name="basic.CP_CallForFrmersMtgMsK" placeholder="Call For Farmers Meeting">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_CallForFrmersMtgGsP" name="basic.CP_CallForFrmersMtgGsP" placeholder="Call For Farmers Meeting">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_CallForFrmersMtgTmeLiness" placeholder="Call For Farmers Meeting" name="CP_CallForFrmersMtgTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+       <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_CallForFrmersMtgGamit" name="CP_CallForFrmersMtgGamit" placeholder="Call For Farmers Meeting">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+            <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_CallForFrmersMtgRel" name="CP_CallForFrmersMtgRel" placeholder="Call For Farmers Meeting">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_CallForFrmersMtgAdeq" name="CP_CallForFrmersMtgAdeq" placeholder="Call For Farmers Meeting">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_CallForFrmersMtgKsK" placeholder="Call For Farmers Meeting" name="CP_CallForFrmersMtgKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          Iba pa, tukuyin:
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_OthersMsK" name="basic.CP_OthersMsK">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_OthersGsP" name="basic.CP_OthersGsP">
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_OthersTmeLiness" name="CP_OthersTmeLiness" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_OthersGamit" name="CP_OthersGamit">
+            <ion-option>
+              1 -Not Useful
+            </ion-option>
+            <ion-option>
+              2 -Somewhat Useful
+            </ion-option>
+            <ion-option>
+              3 - Useful
+            </ion-option>
+          </ion-select>
+        </ion-col>
+          <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_OthersRel" name="CP_OthersRel">
+            <ion-option>
+              1 - Not reliable
+            </ion-option>
+            <ion-option>
+              2 - Somewhat reliable
+            </ion-option>
+            <ion-option>
+              3 - Reliable
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2  style="border-style:solid;border-color:#1d2610">
+          <ion-select [(ngModel)]="basic.CP_OthersAdeq" name="CP_OthersAdeq">
+            <ion-option>
+              1 - Not Adequate
+            </ion-option>
+            <ion-option>
+              2 - Somewhat Adequate
+            </ion-option>
+            <ion-option>
+              3 - Adequate
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_OthersKsK" name="CP_OthersKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+		<h6 id="survey-heading2" style="color:#000000;">
+    8. Gaano kahalaga ang mga sumusunod na katangian ng impormasyong patungkol sa klima o lagay ng panahon?
+    </h6>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-3>
+          1 - Not important
+        </ion-col>
+        <ion-col col-3>
+          2 - Less important
+        </ion-col>
+        <ion-col col-3>
+          3 - Important
+        </ion-col>
+        <ion-col col-3>
+          4 - Very important
+        </ion-col>
+      </ion-row>
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Katangian
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Weather forecast
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Season climate forecast
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Long-term climate projection
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          Lead time
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeadTimeWeathFC" name="CP_LeadTimeWeathFC" style="border-bottom: 1px solid #A0A0A0;">
+            <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeadTimeSeasonalClimateFC" name="CP_LeadTimeSeasonalClimateFC" style="border-bottom: 1px solid #A0A0A0;">
+           <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeadTimeLongTermClimProj" name="CP_LeadTimeLongTermClimProj" style="border-bottom: 1px solid #A0A0A0;">
+            <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          Accuracy
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select  [disabled]="checkvalue()" [(ngModel)]="basic.CP_AccuracyWeathFC" name="CP_AccuracyWeathFC" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select  [disabled]="checkvalue()" [(ngModel)]="basic.CP_AccuracySeasonalClimateFC" name="CP_AccuracySeasonalClimateFC" style="border-bottom: 1px solid #A0A0A0;">
+            <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_AccuracyLongTermClimProj" name="CP_AccuracyLongTermClimProj" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          Frequency
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_FrequencyWeathFC" name="CP_FrequencyWeathFC" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_FrequencySeasonalClimateFC" name="CP_FrequencySeasonalClimateFC" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_FrequencyLongTermClimProj" name="CP_FrequencyLongTermClimProj" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          Reliability
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_ReliabilityTimeWeathFC" name="CP_LeadReliabilityWeathFC" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeadReliabilitySeasonalClimateFC" name="CP_LeadReliabilitySeasonalClimateFC" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeadReliabilityLongTermClimProj" name="CP_LeadReliabilityLongTermClimProj" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-option>
+              1
+            </ion-option>
+            <ion-option>
+              2
+            </ion-option>
+            <ion-option>
+              3
+            </ion-option>
+            <ion-option>
+              4
+            </ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <h6 id="survey-heading2" style="color:#000000;">
+    9. Pakisagot ang mga sumusunod na katanungan:
+    </h6>
+
+    <ion-grid nowrap style="overflow-x:scroll!important;overflow-y:hidden;word-wrap:break-word;">
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Impormasyon
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Preferred lead time
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Ideal accuracy (%)
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Preferred frequency
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          Weather forecast
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WeathFcastPrefLeadTime" name="CP_WeathFcastPrefLeadTime" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WeathFcastIdealAcc" name="CP_WeathFcastIdealAcc" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WeathFcastPrefFreq" name="CP_WeathFcastPrefFreq" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          Seasonal climate forecast
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SeasonalFcastPrefLeadTime" name="CP_SeasonalFcastPrefLeadTime" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SesonalFcastIdealAcc" name="CP_SeasonalFcastIdealAcc" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SeasonalFcastPrefFreq" name="CP_SeasonalFcastPrefFreq" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row nowrap>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          Long-term climate projection
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_LongTrmClimPrjPrefLeadTime" name="CP_LongTrmClimPrjPrefLeadTime" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_LongTrmClimPrjIdealAcc" name="CP_LongTrmClimPrjIdealAcc" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
+          <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_LongTrmClimPrjPrefFreq" name="CP_LongTrmClimPrjPrefFreq" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!--TODO-->
+    <h6 id="survey-heading2" style="color:#000000;">
+      10. Bakit mo ginagamit ang mga impormasyon na ito para sa pagsasaka?
+    </h6>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Nakakapagpataas ng ani</ion-label>
+        <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_Ani" name="CP_Ani"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nakakatulong bumaba ang gastos sa pagsasaka</ion-label>
+        <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_TulongBabaGastos" name="CP_TulongBabaGastos"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nakakatulong bumaba ang mga nasasayang sa pagsasaka</ion-label>
+        <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_TulongBabaSayang" name="CP_TulongBabaSayang"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Libre ang impormasyon</ion-label>
+        <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_Libre" name="CP_Libre"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mapagkakatiwalaan ang pinagkukunan</ion-label>
+        <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_Mapagkakatiwalaan" name="CP_Mapagkakatiwalaan"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Madaling maintindihan ang impormasyon</ion-label>
+        <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_MadalingIntindi" name="CP_MadalingIntindi"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-input type="text" [disabled]="checkvalue()" name="title"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Lahat ng nabanggit</ion-label>
+        <ion-checkbox (click)="selectAll()"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+		<button ion-button type="submit" style = "background-color:green" block> NEXT </button>
+	</form>
+</ion-content>
