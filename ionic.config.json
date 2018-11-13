@@ -1,0 +1,7 @@
+{
+  "name": "CNA",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
