@@ -160,24 +160,6 @@
           </ion-item>
         </ion-col>
       </ion-row>
-
-      <ion-row nowrap>
-        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
-          Iba pa, tukuyin:
-          <input type="text" [(ngModel)]="basic.CP_DOthers" name="CP_D23_9" style="border-bottom: 1px solid #A0A0A0;">
-        </ion-col>
-        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-item>
-            <ion-checkbox [(ngModel)]="basic.CP_D23_9" name="CP_D239"></ion-checkbox>
-          </ion-item>
-        </ion-col>
-        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-item>
-            <ion-checkbox [(ngModel)]="basic.CP_D24_9" name="CP_D249"></ion-checkbox>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-
     </ion-grid>
 
 
@@ -186,14 +168,14 @@
         25. Paano mo masusukat ang iyong pakikilahok sa mga interaktibong pamamaraan?
       </ion-label>
       <ion-select [(ngModel)]="basic.CP_Interactivity" name="CP_Interactivity">
-        <ion-option>
-          Aktibo(Nagtatanong, sumasagot, at nagbibigay ng suhestyon)
+        <ion-option value ='1'>
+          1 - Aktibo(Nagtatanong, sumasagot, at nagbibigay ng suhestyon)
         </ion-option>
-        <ion-option>
-          Aktibo(Palatanong lamang)
+        <ion-option value ='2'>
+          2 - Aktibo(Palatanong lamang)
         </ion-option>
-        <ion-option>
-          No interaction during activities(Kumukuha lang ng impormasyon)
+        <ion-option value ='3'>
+          3 - No interaction during activities(Kumukuha lang ng impormasyon)
         </ion-option>
       </ion-select>
     </ion-item>
@@ -203,11 +185,11 @@
         26. Namamahagi ka ba ng impormasyon sa kapwa magsasaka?
       </ion-label>
       <ion-select [(ngModel)]="basic.CP_DisperseInfo" name="CP_DisperseInfo">
-        <ion-option>
-          Yes
+        <ion-option value = '1'>
+          1 - Yes
         </ion-option>
-        <ion-option>
-          No
+        <ion-option value = '2'>
+          2 - No
         </ion-option>
       </ion-select>
     </ion-item>
@@ -255,11 +237,6 @@
       <ion-item>
         <ion-label>Farmer Field School(FFS), Climate Field School(CFS)</ion-label>
         <ion-checkbox [checked]="selectMul" [(ngModel)]="basic.CP_D27_8" name="CP_D27_8"></ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
-        <ion-input type="text" [(ngModel)]="basic.CP_27Other" name="CP_27Other" name="title"></ion-input>
       </ion-item>
 
       <ion-item>

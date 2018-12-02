@@ -100,8 +100,8 @@ export class WtpPage {
     this.data.writeData();  
 
 		let alert2 = this.alertCtrl.create({
-	    title: 'Info',
-	    message: 'File written successfully',
+	    title: 'File written successfully',
+	    message: 'Check Download directory to see output',
 	    buttons: [
 	      {
 	        text: 'OK',

@@ -461,50 +461,6 @@
           </ion-item>
         </ion-col>
       </ion-row>
-
-      <ion-row nowrap>
-        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
-          Iba pa, tukuyin
-          <ion-input type="text" [disabled]="checkvalue()" style="border-bottom: 1px solid #A0A0A0;"></ion-input>
-        </ion-col>
-        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-item>
-            <ion-checkbox [(ngModel)]="basic.CP_C14_11" name="CP_C14_11"></ion-checkbox>
-          </ion-item>
-        </ion-col>
-        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-item>
-            <ion-checkbox [(ngModel)]="basic.CP_C15_11" name="CP_C15_11"></ion-checkbox>
-          </ion-item>
-        </ion-col>
-        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-item>
-            <ion-checkbox [(ngModel)]="basic.CP_C16_11" name="CP_C16_11"></ion-checkbox>
-          </ion-item>
-        </ion-col>
-        <ion-col col-8 style="border-style:solid;border-color:#1d2610">
-          <ion-item>
-          <ion-label></ion-label>
-          <ion-select [(ngModel)]="basic.CP_C17_11" name="CP_C17_11">
-            <ion-option>
-              Male
-            </ion-option>
-            <ion-option>
-              Female
-            </ion-option>
-            <ion-option>
-              Both
-             </ion-option>
-          </ion-select>
-          </ion-item>
-        </ion-col>
-        <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-item>
-            <ion-checkbox [(ngModel)]="basic.CP_C18_11" name="CP_C18_11"></ion-checkbox>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-
     </ion-grid>
 
     <h6 id="survey-heading2" style="color:#000000;">
@@ -552,7 +508,7 @@
 
       <ion-item>
         <ion-label>Ginagamit din ng kapwa magsasaka</ion-label>
-        <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_20_3" name="CP_C20_3"></ion-checkbox>
+        <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_C20_3" name="CP_C20_3"></ion-checkbox>
       </ion-item>
 
       <ion-item>
@@ -563,11 +519,6 @@
       <ion-item>
         <ion-label>Accessible sa community</ion-label>
         <ion-checkbox [checked]="selectMul_20" [(ngModel)]="basic.CP_C20_5" name="CP_C20_5"></ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
-        <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_C20_Others" name="CP_C20_Others" name="title"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -603,15 +554,9 @@
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
-        <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_C21_Other" name="CP_C21_Other" name="title"></ion-input>
-      </ion-item>
-
-      <ion-item>
         <ion-label>Lahat ng nabanggit</ion-label>
         <ion-checkbox (click)="selectAll(21)"></ion-checkbox>
       </ion-item>
-
     </ion-list>
 
     <ion-item id="survey-select3">
@@ -619,26 +564,32 @@
         22. Nais mo bang makakuha ng impormasyon mula sa sarai knowledge portal(www.sarai.ph)
       </ion-label>
       <ion-select [(ngModel)]="basic.CP_NaisImpormasyon" name="CP_NaisImpormasyon">
-        <ion-option>
+        <ion-option value = '1'>
           Hindi - at hindi marunong
         </ion-option>
-        <ion-option>
+        <ion-option value = '2'>
           Hindi - walang akses
         </ion-option>
-        <ion-option>
+        <ion-option value = '3'>
           Oo - pero hindi marunong
         </ion-option>
-        <ion-option>
+        <ion-option value = '4'>
           Oo - marunong
         </ion-option>
-        <ion-option>
+        <ion-option value = '5'>
           Oo - may akses
         </ion-option>
-        <ion-option>
+        <ion-option value = '6'>
           Oo - walang akses
         </ion-option>
       </ion-select>
     </ion-item>
+
+    <ion-item>
+      <ion-label stacked text-wrap style="font-size:15px">Notes</ion-label>
+      <ion-input type="text" [(ngModel)]="basic.comCnotes" name="comCnotes"></ion-input>
+    </ion-item>
+
 		<button ion-button type="submit" style = "background-color:green" block> NEXT </button>
 	</form>
 

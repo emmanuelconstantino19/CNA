@@ -27,33 +27,33 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>Ayon sa Fertilizer Companies</ion-label>
+        <ion-label>1 - Ayon sa Fertilizer Companies</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_FerCom" name="NA_FerCom"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Ayon sa mga AEW</ion-label>
+        <ion-label>2 - Ayon sa mga AEW</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_AEW" name="NA_AEW"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Natutunan mo mula sa mga seminar/trainings</ion-label>
+        <ion-label>3 - Natutunan mo mula sa mga seminar/trainings</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_SemTraining" name="NA_SemTraining"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Nakaugaling pamamaraan</ion-label>
+        <ion-label>4 - Nakaugaling pamamaraan</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_OldMethod" name="NA_OldMethod"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Mula sa sariling karanasan</ion-label>
+        <ion-label>5 - Mula sa sariling karanasan</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_SelfExp" name="NA_SelfExp"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Iba pa</ion-label>
-        <ion-checkbox [(ngModel)]="basic.NA_OtherFert" name="NA_OtherFert"></ion-checkbox>
+        <ion-label stacked text-wrap style="font-size:15px">6 - Iba pa,tukuyin</ion-label>
+        <ion-input [(ngModel)]="basic.NA_OtherFert" name="NA_OtherFert" type="text"></ion-input>
       </ion-item>
     </ion-list>
 
@@ -64,28 +64,28 @@
     <ion-list>
 
       <ion-item>
-        <ion-label >Sa anyo ng pananim</ion-label>
+        <ion-label >1 - Sa anyo ng pananim</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_CropForm" name="NA_CropForm"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Sa anyo ng lupa</ion-label>
+        <ion-label>2 - Sa anyo ng lupa</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_LandForm" name="NA_LandForm"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">May abiso mula sa ibang tao</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">3 - May abiso mula sa ibang tao</ion-label>
         <ion-input type="text" [(ngModel)]="basic.NA_Permit" name="NA_Permit"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">May nakaugaliang pamamaraan gaya ng</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">4 - May nakaugaliang pamamaraan gaya ng</ion-label>
         <ion-input type="text" [(ngModel)]="basic.NA_Trad" name="NA_Trad"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>Iba pa</ion-label>
-        <ion-checkbox [(ngModel)]="basic.NA_IrrigOther" name="NA_IrrigOther"></ion-checkbox>
+        <ion-label stacked text-wrap style="font-size:15px">5 - Iba pa</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_IrrigOther" name="NA_IrrigOther"></ion-input>
       </ion-item>
 
     </ion-list>
@@ -96,10 +96,10 @@
         3. Alam mo ba ang klase ng lupang pinagtataniman mo?
       </ion-label>
       <ion-select [(ngModel)]="basic.NA_TypeLand" name="NA_TypeLand">
-        <ion-option>
+        <ion-option value = '1'>
           Oo
         </ion-option>
-        <ion-option>
+        <ion-option value = '2'>
           Hindi
         </ion-option>
       </ion-select>
@@ -110,10 +110,10 @@
         4. Inaalam mo ang presyo ng iyong pananim sa merkado?
       </ion-label>
       <ion-select [(ngModel)]="basic.NA_MarketPrice" name="NA_MarketPrice">
-        <ion-option>
+        <ion-option value = '1'>
           Oo
         </ion-option>
-        <ion-option>
+        <ion-option value = '2'>
           Hindi
         </ion-option>
       </ion-select>
@@ -126,69 +126,69 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>Sa dami ng ulan na pumatak</ion-label>
+        <ion-label>1 - Sa dami ng ulan na pumatak</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_RainFall" name="NA_RainFall"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Sumasabay sa iba pang nagtatanim</ion-label>
+        <ion-label>2 - Sumasabay sa iba pang nagtatanim</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_OtherPlantDate" name="NA_OtherPlantDate"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Base sa target na petsa na dapat ito ay nasa merkado</ion-label>
+        <ion-label>3 - Base sa target na petsa na dapat ito ay nasa merkado</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_TargetMarketDate" name="NA_TargetMarketDate"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">May abiso mula sa ibang tao</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">4 - May abiso mula sa ibang tao</ion-label>
         <ion-input type="text" [(ngModel)]="basic.NA_PermitDate" name="NA_PermitDate"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>Nakaugaliang pamamaraan</ion-label>
+        <ion-label>5 - Nakaugaliang pamamaraan</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_TradDate" name="NA_TradDate"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">6 - Iba pa, tukuyin</ion-label>
         <ion-input type="text" [(ngModel)]="basic.NA_OthersDate" name="NA_OthersDate"></ion-input>
       </ion-item>
 
     </ion-list>
 
     <h6 id="survey-heading2" style="color:#000000;">
-      6. Ano ang iyong ginagawa kapag nabalitaan mong may parating na masamang panhaon o kaya naman ay may paglaganap ng sakit ng sakit sa pananim?
+      6. Ano ang iyong ginagawa kapag nabalitaan mong may parating na masamang panahon o kaya naman ay may paglaganap ng sakit ng sakit sa pananim?
     </h6>
     <ion-list>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Sumasanguni sa ibang tao</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">1 - Sumasanguni sa ibang tao</ion-label>
         <ion-input type="text" [(ngModel)]="basic.NA_Consult" name="NA_Consult"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>Inaani ko na agad ang aking pananim</ion-label>
+        <ion-label>2 - Inaani ko na agad ang aking pananim</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_Harvest" name="NA_Harvest"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Nag-aantay ng abiso mula sa ibang tao</ion-label>
+        <ion-label>3 - Nag-aantay ng abiso mula sa ibang tao</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_PermitBWeather" name="NA_PermitBWeather"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Nakaugaliang pamamaraan</ion-label>
+        <ion-label>4 - Nakaugaliang pamamaraan</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_TradBWeather" name="NA_TradBWeather"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Wala</ion-label>
+        <ion-label>5 - Wala</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_None" name="NA_None"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">6 - Iba pa, tukuyin</ion-label>
         <ion-input type="text" [(ngModel)]="basic.NA_OtherBWeather" name="NA_OtherBWeather"></ion-input>
       </ion-item>
 
@@ -200,17 +200,17 @@
     <ion-list radio-group [(ngModel)]="basic.NA_Report" name="NA_Report">
       <ion-item>
         <ion-label>Oo</ion-label>
-        <ion-radio></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Kanino?</ion-label>
-        <ion-input type="text" name="title"></ion-input>
+        <ion-radio value='1'></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Hindi</ion-label>
-        <ion-radio></ion-radio>
+        <ion-radio value='2'></ion-radio>
       </ion-item>
     </ion-list>
+    <ion-item>
+        <ion-label stacked text-wrap style="font-size:15px">Kung Oo, Kanino?</ion-label>
+        <ion-input [(ngModel)]="basic.NA_ReportToWhom" name="NA_ReportToWhom" type="text"></ion-input>
+    </ion-item>
 
 
     <h6 id="survey-heading2" style="color:#000000;">
@@ -219,32 +219,32 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>Sa Barangay</ion-label>
+        <ion-label>1 - Sa Barangay</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_Barangay" name="NA_Barangay"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Sa Organisasyong kinabibilangan</ion-label>
+        <ion-label>2 - Sa Organisasyong kinabibilangan</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_Org" name="NA_Org"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Sa AEW</ion-label>
+        <ion-label>3 - Sa AEW</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_AEW2" name="NA_AEW2"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Farmer Leader</ion-label>
+        <ion-label>4 - Farmer Leader</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_Leader" name="NA_Leader"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Kapwa magsasaka</ion-label>
+        <ion-label>5 - Kapwa magsasaka</ion-label>
         <ion-checkbox [(ngModel)]="basic.NA_OtherFarmers" name="NA_OtherFarmers"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">6 - Iba pa, tukuyin</ion-label>
         <ion-input type="text" [(ngModel)]="basic.NA_OtherInquiry" name="NA_OtherInquiry"></ion-input>
       </ion-item>
 
@@ -253,28 +253,36 @@
     <h6 id="survey-heading2" style="color:#000000;">
       9. Nais mo bang makatanggap ng impormasyon tungkol sa makabagong pagsasaka?
     </h6>
-    <ion-list radio-group [(ngModel)]="basic.NA_ReceiveInfo" name="NA_ReceiveInfo">
+
+    <ion-list>
+
       <ion-item>
-        <ion-label text-wrap>Hindi</ion-label>
-        <ion-radio item-left></ion-radio>
+        <ion-label>1 - Hindi</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Received1" name="NA_Received1"></ion-checkbox>
       </ion-item>
+
       <ion-item>
-        <ion-label text-wrap>Oo - matuto gumamit at bumasa ng data ng soil sensors</ion-label>
-        <ion-radio item-left></ion-radio>
+        <ion-label>2 - Oo, matuto gumamit at bumasa ng data ng soil sensors</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Received2" name="NA_Received2"></ion-checkbox>
       </ion-item>
+
       <ion-item>
-        <ion-label text-wrap>Oo - matuto gumamit at bumasa ng data ng AWS</ion-label>
-        <ion-radio item-left></ion-radio>
+        <ion-label>3 - Oo, matuto gumamit at bumasa ng data ng AWS</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Received3" name="NA_Received3"></ion-checkbox>
       </ion-item>
+
       <ion-item>
-        <ion-label text-wrap>Oo - matuto gumamit at bumasa ng resulta ng Crop Manager</ion-label>
-        <ion-radio item-left></ion-radio>
+        <ion-label>4 - Oo, matuto gumamit at bumasa ng resulta ng Crop Manager</ion-label>
+        <ion-checkbox [(ngModel)]="basic.NA_Received4" name="NA_Received4"></ion-checkbox>
       </ion-item>
+
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa,tukuyin</ion-label>
-        <ion-input type="text" name="title"></ion-input>
+        <ion-label stacked text-wrap style="font-size:15px">5 - Iba pa, tukuyin</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.NA_Received5" name="NA_Received5"></ion-input>
       </ion-item>
+
     </ion-list>
+
     <button ion-button type="submit" style = "background-color:green" block> NEXT</button>
 	</form>
 </ion-content>

@@ -73,6 +73,7 @@ export class SocioDemogPage {
     this.basic['SDP_IbaPa'] = false;
 
     this.basic['SDP_mNetIncome'] = "";
+    this.basic['SDP_mMemberCheck'] = "";
     this.basic['SDP_mMemberNetIncome'] = "";
     this.basic['SDP_mFamNetIncome'] = "";
 
@@ -98,9 +99,7 @@ export class SocioDemogPage {
   }
 
   checkvalue(){
-    if(this.data.reboot == this.evaluated && this.data.reboot == true)
-      this.reset();
-    return this.evaluated;
+    return 0;
   }
 
   checkValidity(){
@@ -151,11 +150,60 @@ export class SocioDemogPage {
 	 alert.present();
   	}
   	else{
-  		if(this.evaluated==false){
-  			this.data.splitValues(this.basic);
-  			this.evaluated = true;
-  		}
-	  	this.navCtrl.push(SocioDemogTable1Page);	
+      this.data.cna1_ans = this.data.cna1_ans +
+                            this.data.cleanString(this.basic['SDP_homeMale'])  + ','
+                            +this.data.cleanString(this.basic['SDP_homeFemale'])  + ','
+                            +this.data.cleanString(this.basic['SDP_numSon'])  + ','
+                            +this.data.cleanString(this.basic['SDP_numDaughter'])  + ','
+                            +this.data.cleanString(this.basic['SDP_highestEducation']) + ','
+                            +this.data.cleanString(this.basic['SDP_informalEducation']) + ','
+                            +this.data.cleanString(this.basic['SDP_yrFarming']) + ','
+                            +this.data.cleanString(this.basic['SDP_ownedLand']) + ','
+                            +this.data.cleanString(this.basic['SDP_primary']) + ',';
+
+    var otherSource = '';
+    otherSource += ((this.basic['SDP_SariSariStore']) ? '1,':'');
+    otherSource += ((this.basic['SDP_SarilingBusiness']) ? '2,':'');
+    otherSource += ((this.basic['SDP_EmpleyadoNgGobyerno']) ? '3,':'');
+    otherSource += ((this.basic['SDP_EmpleyadoPribadongSektor']) ? '4,':'');
+    otherSource += ((this.basic['SDP_KapamilyangOFW']) ? '5,':'');
+    otherSource += ((this.basic['SDP_Pamamasada']) ? '6,':'');
+    otherSource += ((this.basic['SDP_IbaPa']) ? '7,':'');
+    
+    this.data.cna1_ans = this.data.cna1_ans +
+                          this.data.cleanString(otherSource) + ','
+                        +this.data.cleanString(this.basic['SDP_mNetIncome']) + ','
+                        +this.data.cleanString(this.basic['SDP_mMemberCheck']) + ','
+                        +this.data.cleanString(this.basic['SDP_mMemberNetIncome']) + ','
+                        +this.data.cleanString(this.basic['SDP_mFamNetIncome']) + ',';
+
+    var socialservice = '';
+    socialservice += ((this.basic['SDP_SSS']) ? '1,':'');
+    socialservice += ((this.basic['SDP_GSIS']) ? '2,':'');
+    socialservice += ((this.basic['SDP_PhilHealth']) ? '3,':'');
+    socialservice += ((this.basic['SDP_PI']) ? '4,':'');
+    socialservice += ((this.basic['SDP_4P']) ? '5,':'');
+    socialservice += ((this.basic['SDP_SFP']) ? '6,':'');
+    socialservice += ((this.basic['SDP_CashFWP']) ? '7,':'');
+
+    this.data.cna1_ans = this.data.cna1_ans +
+                          this.data.cleanString(socialservice) + ',';
+
+    var org = '';
+    org += ((this.basic['SDP_Koop']) ? '1,':'');
+    org += ((this.basic['SDP_FA']) ? '2,':'');
+    org += ((this.basic['SDP_ARBO']) ? '3,':'');
+    org += ((this.basic['SDP_WO']) ? '4,':'');
+    org += ((this.basic['SDP_PG']) ? '5,':'');
+    org += ((this.basic['SDP_RelFBO']) ? '6,':'');
+    org += ((this.basic['SDP_SCO']) ? '7,':'');
+    org += ((this.basic['SDP_Others']) ? '8,':'');
+
+    this.data.cna1_ans = this.data.cna1_ans +
+                          this.data.cleanString(org) + '\n';
+
+    console.log(this.data.cna1_ans);
+	  this.navCtrl.push(SocioDemogTable1Page);	
   	}
   	
   }

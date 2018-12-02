@@ -37,82 +37,118 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>TV</ion-label>
+        <ion-label>1 - TV</ion-label>
         <ion-checkbox [(ngModel)]="basic.KCC_TV" name="KCC_TV"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Radio</ion-label>
+        <ion-label>2 - Radio</ion-label>
         <ion-checkbox [(ngModel)]="basic.KCC_Radio" name="KCC_Radio"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Newspaper</ion-label>
+        <ion-label>3 - Newspaper</ion-label>
         <ion-checkbox [(ngModel)]="basic.KCC_NewsPaper" name="KCC_NewsPaper"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Leaflets, brochure, posters</ion-label>
+        <ion-label>4 - Leaflets, brochure, posters</ion-label>
         <ion-checkbox [(ngModel)]="basic.KCC_Leaflets" name="KCC_Leaflets"> </ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Kapwa magsasaka</ion-label>
+        <ion-label>5 - Kapwa magsasaka</ion-label>
         <ion-checkbox [(ngModel)]="basic.KCC_Farmers" name="KCC_Farmers"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Kapamilya</ion-label>
+        <ion-label>6 - Kapamilya</ion-label>
         <ion-checkbox [(ngModel)]="basic.KCC_Relatives" name="KCC_Relatives"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Sariling sikap makahanap ng impormasyon</ion-label>
+        <ion-label>7 - Sariling sikap makahanap ng impormasyon</ion-label>
         <ion-checkbox [(ngModel)]="basic.KCC_Self" name="KCC_Self"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
+        <ion-label stacked text-wrap style="font-size:15px">8 - Iba pa, tukuyin</ion-label>
         <ion-input type="text" [(ngModel)]="basic.KCC_Other" name="KCC_Other"></ion-input>
       </ion-item>
 
+    </ion-list>
+
+    <ion-label stacked text-wrap style="font-size:15px">
+      4. Sa tingin mo, nakakaapekto ang climate change sa pagsasaka mo?
+    </ion-label>
+    <ion-list>
+
     <ion-item>
-      <ion-label stacked text-wrap style="font-size:15px">
-        4. Sa tingin mo, nakakaapekto ang climate change sa pagsasaka mo?
-      </ion-label>
-      <ion-select [(ngModel)]="basic.KCC_Affected" name="KCC_Affected">
-        <ion-option>Hindi</ion-option>
-        <ion-option>Oo - tagtuyot</ion-option>
-        <ion-option>Oo - pagbaha</ion-option>
-        <ion-option>Oo - matinding pagulan</ion-option>
-        <ion-option>Oo - mas malalakas na bagyo</ion-option>
-        <ion-option>Oo - mas dumaraming peste at sakit</ion-option>
-      </ion-select>
+      <ion-label>1 - Hindi</ion-label>
+      <ion-checkbox [(ngModel)]="basic.KCC_choice1" name="KCC_choice1"></ion-checkbox>
     </ion-item>
+
+    <ion-item>
+      <ion-label>2 - Oo, tagtuyot</ion-label>
+      <ion-checkbox [(ngModel)]="basic.KCC_choice2" name="KCC_choice2"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>3 - Oo, pagbaha</ion-label>
+      <ion-checkbox [(ngModel)]="basic.KCC_choice3" name="KCC_choice3"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>4 - Oo, matinding pagulan</ion-label>
+      <ion-checkbox [(ngModel)]="basic.KCC_choice4" name="KCC_choice4"> </ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>5 - Oo, mas malalakas na bagyo</ion-label>
+      <ion-checkbox [(ngModel)]="basic.KCC_choice5" name="KCC_choice5"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>6 - Oo, mas dumaraming peste at sakit</ion-label>
+      <ion-checkbox [(ngModel)]="basic.KCC_choice6" name="KCC_choice6"></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
 
     <ion-item>
         <ion-label stacked text-wrap style="font-size:15px">5. Ano ang inyong ginagawa upang makayanan ang mga pinsalang dulot ng climate change?</ion-label>
         <ion-input type="text" [(ngModel)]="basic.KCC_Adaptation" name="KCC_Adaptation"></ion-input>
     </ion-item>
 
-    <ion-item>
       <ion-label stacked text-wrap style="font-size:15px">
         6. Sa tingin mo, may kontribusyon ang pagsasaka sa pagbabago bago ng klima?
       </ion-label>
-      <ion-select [(ngModel)]="basic.KCC_Contrib" name="KCC_Contrib">
-        <ion-option>Wala</ion-option>
-        <ion-option>Oo - methane mula sa mga alagang hayop</ion-option>
-        <ion-option>Oo - methane mula sa mga agricultural wastes</ion-option>
-        <ion-option>Oo - labis at sobrang tagal na pagpapatubig sa palayan</ion-option>
-        <ion-option>Iba pa </ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-list>
+        <ion-item>
+          <ion-label>1 - Wala</ion-label>
+          <ion-checkbox [(ngModel)]="basic.KCC_choice_1" name="KCC_choice_1"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>2 - Oo, methane mula sa mga alagang hayop</ion-label>
+          <ion-checkbox [(ngModel)]="basic.KCC_choice_2" name="KCC_choice_2"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>3 - Oo, methane mula sa mga agricultural wastes</ion-label>
+          <ion-checkbox [(ngModel)]="basic.KCC_choice_3" name="KCC_choice_3"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>4 - Oo, labis at sobrang tagal na pagpapatubig sa palayan</ion-label>
+          <ion-checkbox [(ngModel)]="basic.KCC_choice_4" name="KCC_choice_4"> </ion-checkbox>
+        </ion-item>
+      </ion-list>
 
     <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">6.A Iba pa, tukuyin:</ion-label>
-        <ion-input type="text" [(ngModel)]="basic.KCC_ContribOther" name="KCC_ContribOther"></ion-input>
-    </ion-item>  
-    </ion-list>
+        <ion-label stacked text-wrap style="font-size:15px">5 - Iba pa, tukuyin:</ion-label>
+        <ion-input type="text" [(ngModel)]="basic.KCC_choice_5" name="KCC_choice_5"></ion-input>
+    </ion-item>
 
     <button ion-button type="submit" style = "background-color:green" block> NEXT</button>
 	</form>

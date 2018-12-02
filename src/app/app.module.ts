@@ -33,23 +33,23 @@ import { File } from '@ionic-native/file';
 @NgModule({
   declarations: [
     MyApp,
-     HomePage, //Comment from here
-     SocioDemogPage,
-     SocioDemogTable1Page,
-     FarmRelCharPage,
-     FarmRelChar2Page,
-     FarmRelChar3Page,
-     FarmRelChar4Page,
-     ComPlatAPage,
-     ComPlatBPage,
-     ComPlatCPage,
-     ComPlatDPage,
-     ExpoRiskPage,
-     DecisionMakingPage,
-     NeedAssessmentPage,
-     KccPage,
-     PestsAndDiseasesPage,
-     WtpPage // to here when using --prod
+     // HomePage, //Comment from here
+     // SocioDemogPage,
+     // SocioDemogTable1Page,
+     // FarmRelCharPage,
+     // FarmRelChar2Page,
+     // FarmRelChar3Page,
+     // FarmRelChar4Page,
+     // ComPlatAPage,
+     // ComPlatBPage,
+     // ComPlatCPage,
+     // ComPlatDPage,
+     // ExpoRiskPage,
+     // DecisionMakingPage,
+     // NeedAssessmentPage,
+     // KccPage,
+     // PestsAndDiseasesPage,
+     // WtpPage // to here when using --prod
   ],
   imports: [
     BrowserModule,

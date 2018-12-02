@@ -49,21 +49,21 @@
         <h6>3. Anong pinakamataas na antas ng pag-aaral ang iyong natapos?</h6>
       </ion-label>
       <ion-select [(ngModel)]="basic.SDP_highestEducation" name="SDP_highestEducation">
-        <ion-option>No Schooling</ion-option>
-        <ion-option>Preparatory</ion-option>
-        <ion-option>Elementary</ion-option>
-        <ion-option>Elementary Graduate</ion-option>
-        <ion-option>High School</ion-option>
-        <ion-option>High School Graduate</ion-option>
-        <ion-option>Vocational</ion-option>
-        <ion-option>Vocational Graduate</ion-option>
-        <ion-option>College</ion-option>
-        <ion-option>College Graduate</ion-option>
-        <ion-option>MS Units</ion-option>
-        <ion-option>MS Graduate</ion-option>
-        <ion-option>PhD Units</ion-option>
-        <ion-option>PhD Graduat</ion-option>
-        <ion-option>PostDoc</ion-option>
+        <ion-option value = '1'>1 - No Schooling</ion-option>
+        <ion-option value = '2'>2 - Preparatory</ion-option>
+        <ion-option value = '3'>3 - Elementary</ion-option>
+        <ion-option value = '4'>4 - Elementary Graduate</ion-option>
+        <ion-option value = '5'>5 - High School</ion-option>
+        <ion-option value = '6'>6 - High School Graduate</ion-option>
+        <ion-option value = '7'>7 - Vocational</ion-option>
+        <ion-option value = '8'>8 - Vocational Graduate</ion-option>
+        <ion-option value = '9'>9 - College</ion-option>
+        <ion-option value = '10'>10 - College Graduate</ion-option>
+        <ion-option value = '11'>11 - MS Units</ion-option>
+        <ion-option value = '12'>12 - MS Graduate</ion-option>
+        <ion-option value = '13'>13 - PhD Units</ion-option>
+        <ion-option value = '14'>14 - PhD Graduat</ion-option>
+        <ion-option value = '15'>15 - PostDoc</ion-option>
       </ion-select>
     </ion-item>
 
@@ -82,11 +82,11 @@
         6. Pagmamay-ari ba ninyo ang lupang inyong sinasaka?
       </ion-label>
       <ion-select [(ngModel)]="basic.SDP_ownedLand" name="SDP_ownedLand">
-          <ion-option>Oo</ion-option>
-          <ion-option>Hindi - nagbubuwis</ion-option>
-          <ion-option>Hindi - porsyentuhan</ion-option>
-          <ion-option>Hindi - laborer</ion-option>
-          <ion-option>Hindi - land reform beneficiary</ion-option>
+          <ion-option value='1'>1 - Oo</ion-option>
+          <ion-option value='2'>2 - Hindi - nagbubuwis</ion-option>
+          <ion-option value='3'>3 - Hindi - porsyentuhan</ion-option>
+          <ion-option value='4'>4 - Hindi - laborer</ion-option>
+          <ion-option value='5'>5 - Hindi - land reform beneficiary</ion-option>
       </ion-select>
     </ion-item>
 
@@ -95,8 +95,8 @@
         7. Pagsasaka ba ang iyong pangunahing kabuhayan?
       </ion-label>
       <ion-select [(ngModel)]="basic.SDP_primary" name="SDP_primary">
-          <ion-option>Oo</ion-option>
-          <ion-option>Hindi</ion-option>
+          <ion-option value='1'>1 - Oo</ion-option>
+          <ion-option value='2'>2 - Hindi</ion-option>
       </ion-select>
     </ion-item>
 
@@ -105,31 +105,31 @@
     </h6>
     <ion-list>
       <ion-item>
-        <ion-label>Sari-Sari Store</ion-label>
+        <ion-label>1 - Sari-Sari Store</ion-label>
       <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.SDP_SariSariStore" name="SDP_SariSariStore"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Sariling Business</ion-label>
+        <ion-label>2 - Sariling Business</ion-label>
         <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.SDP_SarilingBusiness" name="SDP_SarilingBusiness"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Empleyado ng Gobyerno</ion-label>
+        <ion-label>3 - Empleyado ng Gobyerno</ion-label>
         <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.SDP_EmpleyadoNgGobyerno" name="SDP_EmpleyadoNgGobyerno"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Empleyado ng Pribadong Sektor</ion-label>
+        <ion-label>4 - Empleyado ng Pribadong Sektor</ion-label>
         <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.SDP_EmpleyadoPribadongSektor" name="SDP_EmpleyadoPribadongSektor"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Kapamilyang OFW</ion-label>
+        <ion-label>5 - Kapamilyang OFW</ion-label>
         <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.SDP_KapamilyangOFW" name="SDP_KapamilyangOFW"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Pamamasada</ion-label>
+        <ion-label>6 - Pamamasada</ion-label>
         <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.SDP_Pamamasada" name="SDP_Pamamasada"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Iba Pa</ion-label>
+        <ion-label>7 - Iba Pa</ion-label>
         <ion-checkbox [checked]="selectMul_8" [(ngModel)]="basic.SDP_IbaPa" name="SDP_IbaPa"></ion-checkbox>
       </ion-item>
       <ion-item>
@@ -144,7 +144,12 @@
     </ion-item>
 
     <ion-item id="survey-input17">
-      <ion-label stacked text-wrap style="font-size:15px">10. Meron bang ibang miyember ng pamilya na may ibang hanapbuhay? Magkano ang kanilang buwanang kita(net)?</ion-label>
+      <ion-label stacked text-wrap style="font-size:15px">10-A. Meron bang ibang miyember ng pamilya na may ibang hanapbuhay?</ion-label>
+      <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.SDP_mMemberCheck" name="SDP_mMemberCheck"></ion-input>
+    </ion-item>
+
+    <ion-item id="survey-input17">
+      <ion-label stacked text-wrap style="font-size:15px">10-B. Kung meron, Magkano ang kanilang buwanang kita(net)?</ion-label>
       <ion-input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.SDP_mMemberNetIncome" name="SDP_mMemberNetIncome"></ion-input>
     </ion-item>
 
@@ -159,37 +164,37 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>SSS</ion-label>
+        <ion-label>1 - SSS</ion-label>
         <ion-checkbox [checked]="selectMul_12" [(ngModel)]="basic.SDP_SSS" name="SDP_SSS"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>GSIS</ion-label>
+        <ion-label>2 - GSIS</ion-label>
         <ion-checkbox [checked]="selectMul_12" [(ngModel)]="basic.SDP_GSIS" name="SDP_GSIS"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>PhilHealth</ion-label>
+        <ion-label>3 - PhilHealth</ion-label>
         <ion-checkbox [checked]="selectMul_12" [(ngModel)]="basic.SDP_PhilHealth" name="SDP_PhilHealth"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Private Insurance</ion-label>
+        <ion-label>4 - Private Insurance</ion-label>
         <ion-checkbox [checked]="selectMul_12" [(ngModel)]="basic.SDP_PI" name="SDP_PI"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>4P's</ion-label>
+        <ion-label>5 - 4P's</ion-label>
         <ion-checkbox [checked]="selectMul_12" [(ngModel)]="basic.SDP_4P" name="SDP_4P"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Suplemental feeding program</ion-label>
+        <ion-label>6 - Suplemental feeding program</ion-label>
         <ion-checkbox [checked]="selectMul_12" [(ngModel)]="basic.SDP_SFP" name="SDP_SFP"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Cash/Food for work program</ion-label>
+        <ion-label>7 - Cash/Food for work program</ion-label>
         <ion-checkbox [checked]="selectMul_12" [(ngModel)]="basic.SDP_CashFWP" name="SDP_CashFWP"></ion-checkbox>
       </ion-item>
 
@@ -206,42 +211,42 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>Kooperatiba</ion-label>
+        <ion-label>1 - Kooperatiba</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_Koop" name="SDP_Koop"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Farmers' Association</ion-label>
+        <ion-label>2 - Farmers' Association</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_FA" name="SDP_FA"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Agrarian Reform Beneficiary Org</ion-label>
+        <ion-label>3 - Agrarian Reform Beneficiary Org</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_ARBO" name="SDP_ARBO"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Women's Org</ion-label>
+        <ion-label>4 - Women's Org</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_WO" name="SDP_WO"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Political Groups</ion-label>
+        <ion-label>5 - Political Groups</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_PG" name="SDP_PG"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Religious or Faith-based Org</ion-label>
+        <ion-label>6 - Religious or Faith-based Org</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_RelFBO" name="SDP_RelFBO"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Senior's Citizen Org</ion-label>
+        <ion-label>7 - Senior's Citizen Org</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_SCO" name="SDP_SCO"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Others (Cultural Labor, Youth Orgs, etc.)</ion-label>
+        <ion-label>8 - Others (Cultural Labor, Youth Orgs, etc.)</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.SDP_Others" name="SDP_Others"></ion-checkbox>
       </ion-item>
 

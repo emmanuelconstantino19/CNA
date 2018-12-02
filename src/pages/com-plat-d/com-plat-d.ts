@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DataManagerProvider } from '../../providers/data-manager/data-manager';
-import { DecisionMakingPage } from '../../pages/decision-making/decision-making';
+import { NeedAssessmentPage } from '../../pages/need-assessment/need-assessment';
 import { AlertController, ModalController} from 'ionic-angular';
 
 /**
@@ -104,11 +104,51 @@ export class ComPlatDPage {
 	 alert.present();
   	}
   	else{
-  		if(this.evaluated == false){
+      this.data.cna44_ans = this.data.code + ',';
+  		var interactive = '';
+      interactive += ((this.basic['CP_D23_1']) ? '1,':'');
+      interactive += ((this.basic['CP_D23_2']) ? '2,':'');
+      interactive += ((this.basic['CP_D23_3']) ? '3,':'');
+      interactive += ((this.basic['CP_D23_4']) ? '4,':'');
+      interactive += ((this.basic['CP_D23_5']) ? '5,':'');
+      interactive += ((this.basic['CP_D23_6']) ? '6,':'');
+      interactive += ((this.basic['CP_D23_7']) ? '7,':'');
+      interactive += ((this.basic['CP_D23_8']) ? '8,':'');
+      this.data.cna44_ans += this.data.cleanString(interactive) + ',';
+      var initiate = '';
+      initiate += ((this.basic['CP_D24_1']) ? '1,':'');
+      initiate += ((this.basic['CP_D24_2']) ? '2,':'');
+      initiate += ((this.basic['CP_D24_3']) ? '3,':'');
+      initiate += ((this.basic['CP_D24_4']) ? '4,':'');
+      initiate += ((this.basic['CP_D24_5']) ? '5,':'');
+      initiate += ((this.basic['CP_D24_6']) ? '6,':'');
+      initiate += ((this.basic['CP_D24_7']) ? '7,':'');
+      initiate += ((this.basic['CP_D24_8']) ? '8,':'');
+
+      this.data.cna44_ans += this.data.cleanString(initiate) + ','
+                          + this.data.cleanString(this.basic['CP_Interactivity']) + ','
+                          + this.data.cleanString(this.basic['CP_DisperseInfo']) + ',';
+
+      var wantAttend = '';
+      wantAttend += ((this.basic['CP_D27_1']) ? '1,':'');
+      wantAttend += ((this.basic['CP_D27_2']) ? '2,':'');
+      wantAttend += ((this.basic['CP_D27_3']) ? '3,':'');
+      wantAttend += ((this.basic['CP_D27_4']) ? '4,':'');
+      wantAttend += ((this.basic['CP_D27_5']) ? '5,':'');
+      wantAttend += ((this.basic['CP_D27_6']) ? '6,':'');
+      wantAttend += ((this.basic['CP_D27_7']) ? '7,':'');
+      wantAttend += ((this.basic['CP_D27_8']) ? '8,':'');
+
+      this.data.cna44_ans += this.data.cleanString(wantAttend) + '\n';
+
+      console.log(this.data.cna44_ans);
+
+
+      if(this.evaluated == false){
   			this.data.splitValues(this.basic);
   			this.evaluated = true;
   		}
-	  	this.navCtrl.push(DecisionMakingPage);	
+	  	this.navCtrl.push(NeedAssessmentPage);	
   	}
   }	
 

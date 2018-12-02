@@ -39,6 +39,9 @@ Una (1) bilang pinakamapanira. Ilagay din ang mga pamamaraan ng pagpuksa sa mga 
         <ion-col col-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
           Gastos sa pag-kontrol
         </ion-col>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610;background-color:#1d2610;color:white">
+          Notes
+        </ion-col>
       </ion-row>
 
       <ion-row nowrap>
@@ -53,6 +56,9 @@ Una (1) bilang pinakamapanira. Ilagay din ang mga pamamaraan ng pagpuksa sa mga 
         </ion-col>
         <ion-col col-6 style="border-style:solid;border-color:#1d2610">
           <input type="text" [(ngModel)]="basic.PAD_PAD1Expenses" name="PAD_PAD1Expenses" style="border-bottom: 1px solid #A0A0A0;">
+        </ion-col>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [(ngModel)]="basic.PAD_PAD1Note" name="PAD_PAD1Note" style="border-bottom: 1px solid #A0A0A0;">
         </ion-col>
       </ion-row>
 
@@ -69,6 +75,9 @@ Una (1) bilang pinakamapanira. Ilagay din ang mga pamamaraan ng pagpuksa sa mga 
         <ion-col col-6 style="border-style:solid;border-color:#1d2610">
           <input type="text" [(ngModel)]="basic.PAD_PAD2Expenses" name="PAD_PAD2Expenses" style="border-bottom: 1px solid #A0A0A0;">
         </ion-col>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [(ngModel)]="basic.PAD_PAD2Note" name="PAD_PAD2Note" style="border-bottom: 1px solid #A0A0A0;">
+        </ion-col>
       </ion-row>
 
       <ion-row nowrap>
@@ -83,6 +92,9 @@ Una (1) bilang pinakamapanira. Ilagay din ang mga pamamaraan ng pagpuksa sa mga 
         </ion-col>
         <ion-col col-6 style="border-style:solid;border-color:#1d2610">
           <input type="text" [(ngModel)]="basic.PAD_PAD3Expenses" name="PAD_PAD3Expenses" style="border-bottom: 1px solid #A0A0A0;">
+        </ion-col>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [(ngModel)]="basic.PAD_PAD3Note" name="PAD_PAD3Note" style="border-bottom: 1px solid #A0A0A0;">
         </ion-col>
       </ion-row>
 
@@ -99,6 +111,9 @@ Una (1) bilang pinakamapanira. Ilagay din ang mga pamamaraan ng pagpuksa sa mga 
         <ion-col col-6 style="border-style:solid;border-color:#1d2610">
           <input type="text" [(ngModel)]="basic.PAD_PAD4Expenses" name="PAD_PAD4Expenses" style="border-bottom: 1px solid #A0A0A0;">
         </ion-col>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [(ngModel)]="basic.PAD_PAD4Note" name="PAD_PAD4Note" style="border-bottom: 1px solid #A0A0A0;">
+        </ion-col>
       </ion-row>
 
       <ion-row nowrap>
@@ -114,6 +129,9 @@ Una (1) bilang pinakamapanira. Ilagay din ang mga pamamaraan ng pagpuksa sa mga 
         <ion-col col-6 style="border-style:solid;border-color:#1d2610">
           <input type="text" [(ngModel)]="basic.PAD_PAD5Expenses" name="PAD_PAD5Expenses" style="border-bottom: 1px solid #A0A0A0;">
         </ion-col>
+        <ion-col col-6 style="border-style:solid;border-color:#1d2610">
+          <input type="text" [(ngModel)]="basic.PAD_PAD5Note" name="PAD_PAD5Note" style="border-bottom: 1px solid #A0A0A0;">
+        </ion-col>
       </ion-row>
 
       <ion-row nowrap>
@@ -125,33 +143,39 @@ Una (1) bilang pinakamapanira. Ilagay din ang mga pamamaraan ng pagpuksa sa mga 
 
     <ion-item id="survey-select3">
       <ion-label stacked text-wrap style="font-size:15px">
-        2. Lumalapit ka ba sa eksperto para sa pagkontrol ng pinsala ng mga peste at sakit?
+        2-A. Lumalapit ka ba sa eksperto para sa pagkontrol ng pinsala ng mga peste at sakit?
       </ion-label>
       <ion-select [(ngModel)]="basic.PAD_LumalapitSaEksperto" name="PAD_expert">
-        <ion-option>
-          Oo
+        <ion-option value = '1'>
+          1 - Oo
         </ion-option>
-        <ion-option>
-          Hindi
+        <ion-option value = '2'>
+          2 - Hindi
         </ion-option>
       </ion-select>
     </ion-item>
+
+    <ion-item id="survey-input13">
+      <ion-label stacked text-wrap style="font-size:15px">2-B. Kung oo, kanino?</ion-label>
+      <ion-input type="text" [(ngModel)]="basic.PAD_LumalapitKanino" name="PAD_expertWho"></ion-input>
+    </ion-item>
+
 
     <ion-item id="survey-select3">
       <ion-label stacked text-wrap style="font-size:15px">
         3. Kung oo, tuwing kailan?
       </ion-label>
       <ion-select [(ngModel)]="basic.PAD_LumalapitKelan" name="PAD_expertWhen">
-        <ion-option>
+        <ion-option value = '1'>
           Bago Magtanim
         </ion-option>
-        <ion-option>
+        <ion-option value = '2'>
           Kapag may tanim na
         </ion-option>
-        <ion-option>
+        <ion-option value = '3'>
           Kapag may pinsala na
         </ion-option>
-        <ion-option>
+        <ion-option value = '4'>
           Regular na kumokonsulta
         </ion-option>
       </ion-select>

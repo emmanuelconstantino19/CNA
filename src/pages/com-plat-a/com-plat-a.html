@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>COMMUNICATION PLATFORM</ion-title>
+    <ion-title>Communication Platform A</ion-title>
     <ion-buttons end><button (click)="openModal()">Add Notes</button></ion-buttons>
   </ion-navbar>
 
@@ -122,7 +122,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_PDKsK" name="CP_PDKsK"  placeholder="Planting Dates" style="border-bottom: 1px solid #A0A0A0; width:100%"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_PDKsK" name="basic.CP_PDKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
       <ion-row nowrap>
@@ -184,7 +187,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" placeholder="Water Management" [(ngModel)]="basic.CP_WatManKsK" name="CP_WatManKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WatManKsK" name="basic.CP_WatManKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -247,7 +253,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_IrrigSchedKsK" name="CP_IrrigSchedKsK"  placeholder="Irrigation Schedule" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_IrrigSchedKsK" name="basic.CP_IrrigSchedKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -310,7 +319,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_FerAppKsK" name="CP_FerAppKsK" placeholder="Fertilizer Application" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_FerAppKsK" name="basic.CP_FerAppKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -373,7 +385,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" placeholder="Pesticide Application" [(ngModel)]="basic.CP_PestAppKsK" name="CP_PestAppKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_PestAppKsK" name="basic.CP_PestAppKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -436,7 +451,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_IPMKsK" name="CP_IPMKsK" placeholder="Integrated Pest Management" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_IPMKsK" name="basic.CP_IPMKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -499,7 +517,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WeathFcastKsK" name="CP_WeathFcastKsK" placeholder="Weather Forecast/Climate Information" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WeathFcastKsK" name="basic.CP_WeathFcastKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -561,7 +582,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ICMKsK" name="CP_ICMKsK" placeholder="Integrated Crop Management" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ICMKsK" name="basic.CP_ICMKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -623,7 +647,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_RainFKsK" name="CP_RainFKsK" placeholder="Rainfall Forecast" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_RainFKsK" name="basic.CP_RainFKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -686,7 +713,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ThunWarnKsK" placeholder="Thunderstorm Warning" name="CP_ThunWarnKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ThunWarnKsK" name="basic.CP_ThunWarnKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -749,7 +779,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_TropCycWarnKsK" name="CP_TropCycWarnKsK" placeholder="Tropical Cyclone Warning" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_TropCycWarnKsK" name="basic.CP_TropCycWarnKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -812,7 +845,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_WindSpdKsK" placeholder="Wind Speed" name="CP_WindSpdKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_WindSpdKsK" name="basic.CP_WindSpdKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -875,7 +911,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_TempKsK" placeholder="Temperature" name="CP_TempKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_TempKsK" name="basic.CP_TempKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -938,7 +977,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_RelHumKsK" placeholder="Relative Humidity" name="CP_RelHumKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_RelHumKsK" name="basic.CP_RelHumKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1001,7 +1043,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeafWetKsK" placeholder="Leaf Wetness" name="CP_LeafWetKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_LeafWetKsK" name="basic.CP_LeafWetKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1064,7 +1109,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SoilMoistKsK" placeholder="Soil Moisture Condition" name="CP_SoilMoistKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_SoilMoistKsK" name="basic.CP_SoilMoistKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1127,7 +1175,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_FloodWarnKsK" placeholder="Flood Warning" name="CP_FloodWarnKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_FloodWarnKsK" name="basic.CP_FloodWarnKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1190,7 +1241,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_ElniLaniKsK" placeholder="El Nino/La Nina Warning" name="CP_ElniLaniKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_ElniLaniKsK" name="basic.CP_ElniLaniKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1253,7 +1307,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_BestFrmPrctKsK" placeholder="Best Farm Practices" name="CP_BestFrmPrctKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_BestFrmPrctKsK" name="basic.CP_BestFrmPrctKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1316,7 +1373,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_NewFrmPrctKsK" placeholder="New Farming Techniques" name="CP_NewFrmPrctKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_NewFrmPrctKsK" name="basic.CP_NewFrmPrctKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1379,7 +1439,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_NewFrmMachneKsK" placeholder="New Farm Machineries" name="CP_NewFrmMachneKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_NewFrmMachneKsK" name="basic.CP_NewFrmMachneKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1442,7 +1505,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_CallForTrngKsK" placeholder="Call For Trainings" name="CP_CallForTrngKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_CallForTrngKsK" name="basic.CP_CallForTrngKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1505,7 +1571,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_CallForFrmersMtgKsK" placeholder="Call For Farmers Meeting" name="CP_CallForFrmersMtgKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_CallForFrmersMtgKsK" name="basic.CP_CallForFrmersMtgKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
 
@@ -1568,7 +1637,10 @@
           </ion-select>
         </ion-col>
         <ion-col col-4 col-sm-4 col-md-3 col-lg-2 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_OthersKsK" name="CP_OthersKsK" style="border-bottom: 1px solid #A0A0A0;"/>
+          <ion-item>
+            <ion-checkbox [(ngModel)]="basic.CP_OthersKsK" name="basic.CP_OthersKsK" placeholder="Pesticide Application">
+            </ion-checkbox>
+          </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -1774,7 +1846,7 @@
           Reliability
         </ion-col>
         <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_ReliabilityTimeWeathFC" name="CP_LeadReliabilityWeathFC" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_ReliabilityWeathFC" name="CP_ReliabilityWeathFC" style="border-bottom: 1px solid #A0A0A0;">
           <ion-option>
               1
             </ion-option>
@@ -1790,7 +1862,7 @@
           </ion-select>
         </ion-col>
         <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeadReliabilitySeasonalClimateFC" name="CP_LeadReliabilitySeasonalClimateFC" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_ReliabilitySeasonalClimateFC" name="CP_ReliabilitySeasonalClimateFC" style="border-bottom: 1px solid #A0A0A0;">
           <ion-option>
               1
             </ion-option>
@@ -1806,7 +1878,7 @@
           </ion-select>
         </ion-col>
         <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_LeadReliabilityLongTermClimProj" name="CP_LeadReliabilityLongTermClimProj" style="border-bottom: 1px solid #A0A0A0;">
+          <ion-select [disabled]="checkvalue()" [(ngModel)]="basic.CP_ReliabilityLongTermClimProj" name="CP_ReliabilityLongTermClimProj" style="border-bottom: 1px solid #A0A0A0;">
           <ion-option>
               1
             </ion-option>
@@ -1867,7 +1939,7 @@
           <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SeasonalFcastPrefLeadTime" name="CP_SeasonalFcastPrefLeadTime" style="border-bottom: 1px solid #A0A0A0;">
         </ion-col>
         <ion-col col-3 style="border-style:solid;border-color:#1d2610">
-          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SesonalFcastIdealAcc" name="CP_SeasonalFcastIdealAcc" style="border-bottom: 1px solid #A0A0A0;">
+          <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SeasonalFcastIdealAcc" name="CP_SeasonalFcastIdealAcc" style="border-bottom: 1px solid #A0A0A0;">
         </ion-col>
         <ion-col col-3 style="border-style:solid;border-color:#1d2610">
           <input type="text" [disabled]="checkvalue()" [(ngModel)]="basic.CP_SeasonalFcastPrefFreq" name="CP_SeasonalFcastPrefFreq" style="border-bottom: 1px solid #A0A0A0;">
@@ -1897,38 +1969,33 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>Nakakapagpataas ng ani</ion-label>
+        <ion-label>1 - Nakakapagpataas ng ani</ion-label>
         <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_Ani" name="CP_Ani"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Nakakatulong bumaba ang gastos sa pagsasaka</ion-label>
+        <ion-label>2 - Nakakatulong bumaba ang gastos sa pagsasaka</ion-label>
         <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_TulongBabaGastos" name="CP_TulongBabaGastos"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Nakakatulong bumaba ang mga nasasayang sa pagsasaka</ion-label>
+        <ion-label>3 - Nakakatulong bumaba ang mga nasasayang sa pagsasaka</ion-label>
         <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_TulongBabaSayang" name="CP_TulongBabaSayang"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Libre ang impormasyon</ion-label>
+        <ion-label>4 - Libre ang impormasyon</ion-label>
         <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_Libre" name="CP_Libre"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Mapagkakatiwalaan ang pinagkukunan</ion-label>
+        <ion-label>5 - Mapagkakatiwalaan ang pinagkukunan</ion-label>
         <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_Mapagkakatiwalaan" name="CP_Mapagkakatiwalaan"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Madaling maintindihan ang impormasyon</ion-label>
+        <ion-label>6 - Madaling maintindihan ang impormasyon</ion-label>
         <ion-checkbox [checked]="selectMul_10" [(ngModel)]="basic.CP_MadalingIntindi" name="CP_MadalingIntindi"></ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
-        <ion-input type="text" [disabled]="checkvalue()" name="title"></ion-input>
       </ion-item>
       
       <ion-item>

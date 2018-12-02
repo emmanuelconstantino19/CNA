@@ -109,6 +109,36 @@ export class ComPlatBPage {
 	 alert.present();
   	}
   	else{
+      this.data.cna42_ans = this.data.code + ',';
+
+      var infosource = '';
+      infosource += ((this.basic['CP_B1_11']) ? '1,':''); 
+      infosource += ((this.basic['CP_B2_11']) ? '2,':'');
+      infosource += ((this.basic['CP_B3_11']) ? '3,':''); 
+      infosource += ((this.basic['CP_B4_11']) ? '4,':''); 
+      infosource += ((this.basic['CP_B5_11']) ? '5,':''); 
+      infosource += ((this.basic['CP_B6_11']) ? '6,':''); 
+      infosource += ((this.basic['CP_B7_11']) ? '7,':''); 
+      infosource += ((this.basic['CP_B8_11']) ? '8,':''); 
+      infosource += ((this.basic['CP_B9_11']) ? '9,':''); 
+      infosource += ((this.basic['CP_B10_11']) ? '10,':''); 
+      infosource += ((this.basic['CP_B11_11']) ? '11,':'');
+
+      this.data.cna42_ans += this.data.cleanString(infosource) + ','
+      + this.data.cleanString(this.basic['CP_Pinagkakatiwalaan']) + ',';
+
+      var reasonForTrust = '';
+
+      reasonForTrust += ((this.basic['CP_MadalingIntindi2']) ? '1,':'');
+      reasonForTrust += ((this.basic['CP_Eksperto']) ? '2,':''); 
+      reasonForTrust += ((this.basic['CP_Libre2']) ? '3,':''); 
+      reasonForTrust += ((this.basic['CP_Pinupunthan']) ? '4,':'');
+
+      this.data.cna42_ans += this.data.cleanString(reasonForTrust) + '\n';
+
+      console.log(this.data.cna42_ans);
+
+
   		if(this.evaluated == false){
   			this.data.splitValues(this.basic);
   			this.evaluated = true;

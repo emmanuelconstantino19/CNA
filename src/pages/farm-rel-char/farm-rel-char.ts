@@ -61,12 +61,14 @@ export class FarmRelCharPage {
     
 
     this.basic['FRC_dryVarieties'] = "";
-    this.basic['FRC_dryQtyHarvested'] = "";
+    this.basic['FRC_dryQtyHarvestedSacks'] = "";
+    this.basic['FRC_dryQtyHarvestedAve'] = "";
     this.basic['FRC_dryQtySold'] = "";
     this.basic['FRC_dryPrice'] = "";
     this.basic['FRC_dryTotalAmount'] = "";
     this.basic['FRC_wetVarieties'] = "";
-    this.basic['FRC_wetQtyHarvested'] = "";
+    this.basic['FRC_wetQtyHarvestedSacks'] = "";
+    this.basic['FRC_wetQtyHarvestedAve'] = "";
     this.basic['FRC_wetQtySold'] = "";
     this.basic['FRC_wetPrice'] = "";
     this.basic['FRC_wetTotalAmount'] = "";
@@ -133,6 +135,36 @@ export class FarmRelCharPage {
 	   alert.present();
   	}
   	else{
+      var crop = '';
+      crop += ((this.basic['FRC_rice']) ? '1,':'');
+      crop += ((this.basic['FRC_corn']) ? '2,':'');
+      crop += ((this.basic['FRC_banana']) ? '3,':'');
+      crop += ((this.basic['FRC_coconut']) ? '4,':'');
+      crop += ((this.basic['FRC_coffee']) ? '5,':'');
+      crop += ((this.basic['FRC_cacao']) ? '6,':'');
+      crop += ((this.basic['FRC_sugarcane']) ? '7,':'');
+      crop += ((this.basic['FRC_soybean']) ? '8,':'');
+      crop += ((this.basic['FRC_tomato']) ? '9,':'');
+
+      this.data.cna2_ans = this.data.cleanString(this.data.code) + ',' 
+                      +this.data.cleanString(crop) + ','
+                      +this.data.cleanString(this.basic['FRC_farmSize']) + ','
+                      +this.data.cleanString(this.basic['FRC_waterSource']) + ','
+                      +this.data.cleanString(this.basic['FRC_dryVarieties']) + ','
+                      +this.data.cleanString(this.basic['FRC_dryQtyHarvestedSacks']) + ','
+                      +this.data.cleanString(this.basic['FRC_dryQtyHarvestedAve']) + ','
+                      +this.data.cleanString(this.basic['FRC_dryQtySold']) + ','
+                      +this.data.cleanString(this.basic['FRC_dryPrice']) + ','
+                      +this.data.cleanString(this.basic['FRC_dryTotalAmount']) + ','
+                      +this.data.cleanString(this.basic['FRC_wetVarieties']) + ','
+                      +this.data.cleanString(this.basic['FRC_wetQtyHarvestedSacks']) + ','
+                      +this.data.cleanString(this.basic['FRC_wetQtyHarvestedAve']) + ','
+                      +this.data.cleanString(this.basic['FRC_wetQtySold']) + ','
+                      +this.data.cleanString(this.basic['FRC_wetPrice']) + ','
+                      +this.data.cleanString(this.basic['FRC_wetTotalAmount']) + '\n';
+
+      console.log(this.data.cna2_ans);
+
   		if(this.evaluated == false){
   			this.data.splitValues(this.basic);
   			this.evaluated = true;

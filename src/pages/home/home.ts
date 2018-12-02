@@ -33,7 +33,10 @@ export class HomePage {
   constructor(private file: File, public mdlCtrl: ModalController, public navCtrl: NavController, private alertCtrl: AlertController, public navParams: NavParams, public data: DataManagerProvider) {
   	this.reset();
     // this fileWrite is here just to request permisison for memory
+    
+
     this.file.writeFile(cordova.file.externalApplicationStorageDirectory, "test.txt", "THIS FILE IS HERE TO CATCH ACCESS TO MEDIA", { replace: false });
+    this.data.createFiles();
   }
 
 
@@ -96,6 +99,15 @@ export class HomePage {
 	 alert.present();
   	}
   	else{
+      this.data.writeHeaders();
+  		this.data.code = this.data.cleanString(this.basic['qCode']);
+  		this.data.cna1_ans = this.data.cleanString(this.data.code) + ','
+  							+this.data.cleanString(this.basic['address']) + ','
+  							+this.data.cleanString(this.basic['contact']) + ','
+  							+this.data.cleanString(this.basic['age']) + ','
+  							+this.data.cleanString(this.basic['sex']) + ','
+  							+this.data.cleanString(this.basic['civil']) + ',';
+
   		if(this.evaluated == false){
   			this.data.splitValues(this.basic);
   			this.evaluated = true;
@@ -112,9 +124,7 @@ export class HomePage {
 
 
   checkValue(){
-    if(this.data.reboot == this.evaluated && this.data.reboot == true)
-      this.reset();
-  	return this.evaluated;
+    return 0;
   }
 
   ionViewDidLoad() {

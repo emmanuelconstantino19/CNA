@@ -26,64 +26,61 @@
     <ion-list>
 
       <ion-item>
-        <ion-label>Deparment of Agriculture-LGU</ion-label>
+        <ion-label>1 - Deparment of Agriculture-LGU</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B1_11" name="CP_B1_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>PhilRICE</ion-label>
+        <ion-label>2 - PhilRICE</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B2_11" name="CP_B2_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Department of Science and Technology</ion-label>
+        <ion-label>3 - Department of Science and Technology</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B3_11" name="CP_B3_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>State University and College</ion-label>
+        <ion-label>4 - State University and College</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B4_11" name="CP_B4_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Private Companies</ion-label>
+        <ion-label>5 - Private Companies</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B5_11" name="CP_B5_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Local research institutions</ion-label>
+        <ion-label>6 - Local research institutions</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B6_11" name="CP_B6_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>International research institutions</ion-label>
+        <ion-label>7 - International research institutions</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B7_11" name="CP_B7_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>NGOs</ion-label>
+        <ion-label>8 - NGOs</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B8_11" name="CP_B8_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Kapwa magsasaka</ion-label>
+        <ion-label>9 - Kapwa magsasaka</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B9_11" name="CP_B9_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Farmer organizations</ion-label>
+        <ion-label>10 - Farmer organizations</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B10_11" name="CP_B10_11"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Mga kapamilyang nagsasaka</ion-label>
+        <ion-label>11 - Mga kapamilyang nagsasaka</ion-label>
         <ion-checkbox [checked]="selectMul_11" [(ngModel)]="basic.CP_B11_11" name="CP_B11_11"></ion-checkbox>
       </ion-item>
 
-      <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
-        <ion-input type="text" name="title"></ion-input>
-      </ion-item>
+
       <ion-item>
         <ion-label>Lahat ng nabanggit</ion-label>
         <ion-checkbox (click)="selectAll(11)"></ion-checkbox>
@@ -96,41 +93,38 @@
         12. Pinakapinagkakatiwalaan
       </ion-label>
       <ion-select [(ngModel)]="basic.CP_Pinagkakatiwalaan" name="CP_Pinagkakatiwalaan">
-        <ion-option>
-          Department of Agriculture-LGU
+        <ion-option value = '1'>
+          1 - Department of Agriculture-LGU
         </ion-option>
-        <ion-option>
-          PhilRICE
+        <ion-option value = '2'>
+          2 - PhilRICE
         </ion-option>
-        <ion-option>
-          Department of Science and Technology
+        <ion-option value = '3'>
+          3 - Department of Science and Technology
         </ion-option>
-        <ion-option>
-          State University and College
+        <ion-option value = '4'>
+          4 - State University and College
         </ion-option>
-        <ion-option>
-          Private Companies
+        <ion-option value = '5'>
+          5 - Private Companies
         </ion-option>
-        <ion-option>
-          Local research institutions
+        <ion-option value = '6'>
+          6 - Local research institutions
         </ion-option>
-        <ion-option>
-          International research institutions
+        <ion-option value = '7'>
+          7 - International research institutions
         </ion-option>
-        <ion-option>
-          NGOs
+        <ion-option value = '8'>
+          8 - NGOs
         </ion-option>
-        <ion-option>
-          Kapwa magsasaka
+        <ion-option value = '9'>
+          9 - Kapwa magsasaka
         </ion-option>
-        <ion-option>
-          Farmer organizations
+        <ion-option value = '10'>
+          10 - Farmer organizations
         </ion-option>
-        <ion-option>
-          Mga kapamilyang nagsasaka
-        </ion-option>
-        <ion-option>
-          Iba pa
+        <ion-option value = '11'>
+          11 - Mga kapamilyang nagsasaka
         </ion-option>
       </ion-select>
 
@@ -160,11 +154,6 @@
       <ion-item>
         <ion-label>Pinupuntahan nila kami sa bahay/farm</ion-label>
         <ion-checkbox [checked]="selectMul_13" [(ngModel)]="basic.CP_Pinupunthan" name="CP_Pinupunthan"></ion-checkbox>
-      </ion-item>
-
-      <ion-item>
-        <ion-label stacked text-wrap style="font-size:15px">Iba pa, tukuyin</ion-label>
-        <ion-input type="text" name="title"></ion-input>
       </ion-item>
 
       <ion-item>

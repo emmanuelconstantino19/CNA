@@ -93,6 +93,79 @@ export class DecisionMakingPage {
   }
 
   ammendData(){
+      this.data.cna61_ans = this.data.code + ',';
+
+      var type = [
+        'Rainfall',
+        'Temp',
+        'Flood',
+        'Drought'
+      ]
+
+      var kw = 'DM_A';
+
+      for(var i = 1 ; i <= 6; i++){
+        for(var j = 0 ; j < type.length ; j++){
+          if(this.basic[kw+(i).toString()+'_'+type[j]]){
+            this.data.cna61_ans += '1,';            
+          }else{
+            this.data.cna61_ans += ',';  
+          }
+        }
+      }
+
+      this.data.cna61_ans += '\n';
+
+      console.log(this.data.cna61_ans);
+
+      this.data.cna62_ans = this.data.code + ',';
+
+      var type2 =[
+        'ElNino', 
+        'LaNina', 
+        'Flood', 
+        'Drought'
+      ]
+
+      var kw2 = 'DM_B';
+
+      for(var i = 1 ; i <= 5; i++){
+        for(var j = 0 ; j < type2.length ; j++){
+          if(this.basic[kw2+(i).toString()+'_'+type2[j]]){
+            this.data.cna62_ans += '1,';            
+          }else{
+            this.data.cna62_ans += ',';  
+          }
+        }
+      }
+
+      this.data.cna62_ans += '\n';
+
+      console.log(this.data.cna62_ans);
+
+      this.data.cna63_ans = this.data.code + ',';
+
+      var type3 = [
+        'LongTermTemp', 
+        'LongTermRainfall', 
+        'LongTermTropical'
+      ]
+      
+      var kw3 = 'DM_C';
+
+      for(var i = 1 ; i <= 3; i++){
+        for(var j = 0 ; j < type3.length ; j++){
+          if(this.basic[kw3+(i).toString()+'_'+type3[j]]){
+            this.data.cna63_ans += '1,';            
+          }else{
+            this.data.cna63_ans += ',';  
+          }
+        }
+      }
+
+      this.data.cna63_ans += '\n';
+
+      console.log(this.data.cna63_ans);
 
   		if(this.evaluated == false){
   			this.data.splitValues(this.basic);

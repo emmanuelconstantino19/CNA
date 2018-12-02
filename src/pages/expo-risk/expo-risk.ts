@@ -129,7 +129,32 @@ export class ExpoRiskPage {
 	 alert.present();
   	}
   	else{
-  		if(this.evaluated == false){
+
+      this.data.cna64_ans = this.data.code + ','
+      + this.basic['ER_StrongWind'] + ','
+      + this.basic['ER_Flood'] + ','
+      + this.basic['ER_Erosion'] + ','
+      + this.basic['ER_Storm'] + ','
+      + this.basic['ER_Drought'] + ','
+      + this.basic['ER_Rainfall'] + ','
+      + this.basic['ER_PriceVolatility'] + '\n';
+
+      console.log(this.data.cna64_ans);
+
+      this.data.cna65_ans = this.data.code + ',';
+      var field1 = '';
+      var field2 = '';
+      var field3 = '';
+      for(var i = 1 ; i <= 20; i++){
+        field1 += (this.basic['AM_C' + i.toString() + '1']) ? '1 ' : '0 ';
+        field2 += (this.basic['AM_C' + i.toString() + '2']) ? '1 ' : '0 ';
+        field3 += (this.basic['AM_' + i.toString() + '_IfNotReason'] == "") ? '- ' : (this.data.cleanString(this.basic['AM_' + i.toString() + '_IfNotReason'])+' '); 
+      }
+      this.data.cna65_ans += this.data.cleanString(field1) + ',' + this.data.cleanString(field2) + ',' + this.data.cleanString(field3) + '\n';
+
+      console.log(this.data.cna65_ans);
+
+      if(this.evaluated == false){
   			this.data.splitValues(this.basic);
   			this.evaluated = true;
   		}
